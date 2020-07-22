@@ -90,7 +90,8 @@
 	<section class="s-contacts page-contacts">
 		<div class="container s-anim">
 			<h2 class="title">Contact us</h2>
-			<form id='contactform' action="{% static 'assets/php/contact.php' %}" name="contactform">
+			<form id='contactform'  name="contactform" enctype="multipart/form-data">
+                {% csrf_token %}
 				<ul class="form-cover">
 					<li class="inp-name"><input id="name" type="text" name="your-name" placeholder="Name"></li>
 					<li class="inp-phone"><input id="phone" type="tel" name="your-phone" placeholder="Phone"></li>
