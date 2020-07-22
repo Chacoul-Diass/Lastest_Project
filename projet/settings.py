@@ -38,6 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     #Applications
+    'creto.apps.CretoConfig'
+
 ]
 
 MIDDLEWARE = [
