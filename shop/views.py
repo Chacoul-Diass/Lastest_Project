@@ -15,10 +15,18 @@ from creto.models import Creto
 # lien → {% url 'shop:home' %}
 def shop(request):
 
-    info= Creto.objects.first()
-    latestProds= models.Product.objects.reverse()[:5]
-    data = {'info':info, 'latestProds':latestProds}
-    return render(request, 'pages/shop/shop.html', data)
+	data = {
+	# les 5 derniers produits en ordre decroissant de id
+	'lastFive':Product.objects.reverse()[:5],
+
+	'nbArticles':Product.objects.count(),
+
+	'products' : models.Product.objects.all(),
+
+	'info':Creto.objects.first(),
+	}
+
+	return render(request, 'pages/shop/shop.html', data)
 
 	# data = {}
     
