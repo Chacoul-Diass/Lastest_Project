@@ -48,3 +48,8 @@ class ShopCart(models.Model):
 	user = models.ForeignKey(User, on_delete=models.SET_NULL, null=True)
 	produit = models.ForeignKey(Product, on_delete=models.SET_NULL, null=True)
 	quantity = models.IntegerField()
+
+class FavoriteProduct(models.Model):
+	user = models.ForeignKey(User, on_delete=models.SET_NULL, null=True)
+	produit = models.ForeignKey(Product, on_delete=models.SET_NULL, null=True)
+	quantity = models.IntegerField()

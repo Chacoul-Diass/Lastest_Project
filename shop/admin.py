@@ -74,6 +74,53 @@ class ProductAdmin(admin.ModelAdmin):
 			]
 		})
 	]
+class ShopCartAdmin(admin.ModelAdmin):
+	list_display = (
+		'user',
+		'produit',
+		'quantity',
+	)
+	list_filter = (
+		'user',
+	)
+	search_fields = (
+		'user',
+	)
+	list_per_page = 10
+	fieldsets = [
+		('Info', {
+			'fields':[
+				'user',
+				'produit',
+				'quantity',
+			]
+		})
+		
+	]
+
+class FavoriteProductAdmin(admin.ModelAdmin):
+	list_display = (
+		'user',
+		'produit',
+		
+	)
+	list_filter = (
+		'user',
+	)
+	search_fields = (
+		'user',
+	)
+	list_per_page = 10
+	fieldsets = [
+		('Info', {
+			'fields':[
+				'user',
+				'produit',
+				
+			]
+		})
+		
+	]
 
 def _register(model, admin_class):
     admin.site.register(model, admin_class)
@@ -81,3 +128,5 @@ def _register(model, admin_class):
 
 _register(models.Category, CategoryAdmin)
 _register(models.Product, ProductAdmin)
+_register(models.ShopCart, ShopCartAdmin)
+_register(models.FavoriteProduct, FavoriteProductAdmin)
