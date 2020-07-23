@@ -122,19 +122,18 @@
 
 							<div class="col-12 col-sm-4 prod-item-col">
 								<div class="product-item">
-									<span class="top-sale">A Vendre</span>
 									<ul class="product-icon-top">
 										<li><a href="#"><i class="fa fa-refresh" aria-hidden="true"></i></a></li>
 										<li><a href="#"><i class="fa fa-heart" aria-hidden="true"></i></a></li>
 									</ul>
-									<a href="single-shop.html" class="product-img"><img src="{{ pro.image0.url }}" alt="product"></a>
+									<a href="{% url 'shop:single' pro.id %}" class="product-img"><img src="{{ pro.image0.url }}" alt="product"></a>
 									<div class="product-item-wrap">
 										<div class="product-item-cover">
 											<div class="price-cover">
 												<div class="new-price">{{pro.prix}}</div>
 												<div class="old-price">{{pro.reduction}}</div>
 											</div>
-											<h6 class="prod-title"><a href="single-shop.html">{{pro.titre}}<br>Girls Mountain Bike</a></h6>
+											<h6 class="prod-title"><a href="single-shop.html">{{pro.titre}}</a></h6>
 											<a href="single-shop.html" class="btn"><span>Acheter</span></a>
 										</div>
 										<div class="prod-info">

@@ -28,5 +28,11 @@ def shop(request):
 	return render(request, 'pages/shop/shop.html',data)
 
 
-def single(request):
-    return render(request, 'pages/shop/single-shop.html')
+# lien → {% url 'shop:single' %}
+def single(request, id):
+
+	data = {
+		'article': Product.objects.get(id=id),
+	}
+
+	return render(request, "pages/shop/single-shop.html",data)
