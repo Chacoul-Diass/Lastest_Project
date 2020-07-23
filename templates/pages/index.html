@@ -25,7 +25,7 @@
 							<div class="lable-bike-img"><img src="{{ article.image0.url }}" alt="img"></div>
 							<div class="lable-bike-item">
 								<div class="model">{{ article.categorie }}</div>
-								<div class="price">${{ article.prix }}</div>
+								<div class="price">{{ article.prix }} F CFA</div>
 							</div>
 						</a>
 						<img src="{% static 'assets/img/img-slider.png' %}" alt="img" class="slide-img">
@@ -33,7 +33,7 @@
 				</div>
 			</div>
             {% endfor %}
-            
+
 		</div>
 	</section>
 	<!-- ============= main-slider end ============= -->

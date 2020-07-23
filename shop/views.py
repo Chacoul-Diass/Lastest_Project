@@ -1,15 +1,11 @@
 from django.shortcuts import render, redirect
 from django.http import HttpRequest, HttpResponse, HttpResponseRedirect
 from django.contrib.auth.decorators import login_required
-
 import datetime
 from django.contrib import messages
 
 from .models import ShopCart, FavoriteProduct
 from .forms import ShopCartForm
-from django.shortcuts import render
-from django.http import HttpRequest, HttpResponse
-import datetime
 from . import models
 from shop.models import Category, Product
 from creto.models import Creto
@@ -33,6 +29,9 @@ def shop(request):
 
 def single(request, id):
     return render(request, 'pages/shop/single-shop.html')
+
+
+
 
 @login_required(login_url='/login') 
 def add_to_cart(request, id):
