@@ -12,12 +12,7 @@ urlpatterns = [
     # AddtoCart
     path('addtocart/<int:id>', views.add_to_cart, name='addtocart'),
 
-<<<<<<< HEAD
 
     path('single', views.single, name='single'),
 	
 ]
-=======
-    path('single/<int:id>/', views.single, name='single'),
-]
->>>>>>> 6ccbb720ed14a79d7426065062798992a76354da

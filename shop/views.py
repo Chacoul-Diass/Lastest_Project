@@ -5,54 +5,32 @@ from django.contrib import messages
 
 from .models import ShopCart
 from .forms import ShopCartForm
-<<<<<<< HEAD
-=======
-
->>>>>>> 6ccbb720ed14a79d7426065062798992a76354da
 from django.shortcuts import render
 from django.http import HttpRequest, HttpResponse
 import datetime
 from . import models
 from shop.models import Category, Product
-<<<<<<< HEAD
-=======
 from creto.models import Creto
-
->>>>>>> 6ccbb720ed14a79d7426065062798992a76354da
 
 # Create your views here.
 
 # lien → {% url 'shop:home' %}
 def shop(request):
-<<<<<<< HEAD
-    return render(request, 'pages/shop/shop.html')
+
+    info= Creto.objects.get(pk=1)
+    latestProds= models.Product.objects.reverse()[:5]
+    data = {'info':info, 'latestProds':latestProds}
+    return render(request, 'pages/shop/shop.html', data)
 
 	# data = {}
     
 	# tous les departements
 	# 'departements':models.Departement.objects.all(),
-=======
-    data = {
-        'nbArticles': Product.objects.count(),
 
-        'products': Product.objects.all(),
->>>>>>> 6ccbb720ed14a79d7426065062798992a76354da
+    
 
-        'info': Creto.objects.first(),
-
-        'latestProds': models.Product.objects.reverse()[:5],
-
-<<<<<<< HEAD
 def single(request):
     return render(request, 'pages/shop/single-shop')
-=======
-        'recomProds' :models.Product.objects.filter(recommande=True).reverse()[:10],
-    }
-    return render(request, 'pages/shop/shop.html', data)
-
-# def shop(request):
-#     return render(request, 'pages/shop/shop.html'),
->>>>>>> 6ccbb720ed14a79d7426065062798992a76354da
 
 
 def add_to_cart(request, id):
@@ -95,15 +73,4 @@ def add_to_cart(request, id):
         messages.success(request, 'Votre article  a été ajouté avec success !!')
         return HttpResponseRedirect(url)
 
-<<<<<<< HEAD
     
-=======
-
-# lien → {% url 'shop:single' %}
-def single(request, id):
-    data = {
-        'article': Product.objects.get(id=id),
-    }
-
-    return render(request, "pages/shop/single-shop.html", data)
->>>>>>> 6ccbb720ed14a79d7426065062798992a76354da
