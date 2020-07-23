@@ -11,3 +11,7 @@ import datetime
 
 def shop(request):
     return render(request, 'pages/shop/shop.html')
+
+
+def single(request):
+    return render(request, 'pages/shop/single-shop.html')

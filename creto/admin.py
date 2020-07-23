@@ -79,6 +79,28 @@ class SuscribeAdmin(admin.ModelAdmin):
         }),
     ]
 
+class PhotoGalleryAdmin(admin.ModelAdmin):
+    list_display = (
+        'titre',
+        'status',
+    )
+    list_filter = (
+        'status',
+    )
+    search_fields = (
+        'titre',
+
+    )
+    list_per_page = 10
+    fieldsets = [
+        ('Info', {
+            'fields': [
+                'titre',
+                'photo',
+            ]
+        }),
+    ]
+
 
 def _register(model, admin_class):
     admin.site.register(model, admin_class)
@@ -87,3 +109,4 @@ def _register(model, admin_class):
 _register(models.Creto, CretoAdmin)
 _register(models.Contact, ContactAdmin)
 _register(models.Suscribe, SuscribeAdmin)
+_register(models.PhotoGallery, PhotoGalleryAdmin)
