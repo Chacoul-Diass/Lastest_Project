@@ -12,7 +12,11 @@ def index(request):
 
 
 def gallery(request):
-    return render(request, 'pages/gallery.html')
+    data = {
+        'gallery': models.PhotoGallery.objects.filter(status=True),
+    }
+    return render(request, 'pages/gallery.html', data)
+
 
 #
 # def contacts(request):
@@ -21,12 +25,11 @@ def gallery(request):
 
 def contacts(request: HttpRequest) -> HttpResponse:
     if request.method == 'POST':
-
-        nom = request.POST.get('name')
+        nom = request.POST.get('nom')
         phone = request.POST.get('phone')
         email = request.POST.get('email')
-        message = request.POST.get('comments')
-
+        message = request.POST.get('message')
+        print(nom, phone, email, message)
         c = models.Contact(
             nom=nom,
             phone=phone,
@@ -35,10 +38,11 @@ def contacts(request: HttpRequest) -> HttpResponse:
 
         )
         c.save()
-        return redirect('creto:index')
+        return redirect('contacts')
     else:
+        el = models.Creto.objects.first()
         data = {
-            'contacts': models.Contact.objects.filter(status=True),
-
+            'info': el,
         }
-        return render(request, 'pages/contacts.html')
+
+    return render(request, 'pages/contacts.html', data)

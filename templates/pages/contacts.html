@@ -47,10 +47,12 @@
 							<h6>need help</h6>
 						</div>
 						<div class="contact-block-right">
-							<ul>
-								<li><a href="tel:18004886040">1-800-488-6040</a></li>
-								<li><a href="tel:18005784090">1-800-578-4090</a></li>
-							</ul>
+
+
+                                <ul>
+								<li><a href="tel:{{ info.telephone }}">{{ info.telephone }}</a></li>
+								<li><a href="tel:{{ info.telephone2}}">{{ info.telephone2 }}</a></li>
+							    </ul>
 						</div>
 					</div>
 				</div>
@@ -62,8 +64,8 @@
 						</div>
 						<div class="contact-block-right">
 							<ul>
-								<li><a href="mailto:team@gmail.com">team@gmail.com</a></li>
-								<li><a href="mailto:help@gmail.com">help@gmail.com</a></li>
+								<li><a href="mailto:{{ info.email }}">{{ info.email }}</a></li>
+								<li><a href="mailto:{{ info.email2 }}">{{ info.email2 }}</a></li>
 							</ul>
 						</div>
 					</div>
@@ -76,7 +78,7 @@
 						</div>
 						<div class="contact-block-right">
 							<ul>
-								<li><a class="item-scroll" href="#map">8500, Lorem Street, Chicago, IL, 55030</a></li>
+								<li><a class="item-scroll" href="#map">{{ info.address }}</a></li>
 							</ul>
 						</div>
 					</div>
@@ -90,13 +92,13 @@
 	<section class="s-contacts page-contacts">
 		<div class="container s-anim">
 			<h2 class="title">Contact us</h2>
-			<form id='contactform'  name="contactform" enctype="multipart/form-data">
+			<form id='' name="" action="" method="POST">
                 {% csrf_token %}
 				<ul class="form-cover">
-					<li class="inp-name"><input id="name" type="text" name="your-name" placeholder="Name"></li>
-					<li class="inp-phone"><input id="phone" type="tel" name="your-phone" placeholder="Phone"></li>
-					<li class="inp-email"><input id="email" type="email" name="your-email" placeholder="E-mail"></li>
-					<li class="inp-text"><textarea id="comments" name="your-text" placeholder="Message"></textarea></li>
+					<li class="inp-name"><input id="name" type="text" name="nom" placeholder="Name"></li>
+					<li class="inp-phone"><input id="phone" type="tel" name="phone" placeholder="Phone"></li>
+					<li class="inp-email"><input id="email" type="email" name="email" placeholder="E-mail"></li>
+					<li class="inp-text"><textarea id="comments" name="message" placeholder="Message"></textarea></li>
 				</ul>
 				<div class="checkbox-wrap">
 					<div class="checkbox-cover">
@@ -105,7 +107,8 @@
 					</div>
 				</div>
 				<div class="btn-form-cover">
-					<button id="#submit" type="submit" class="btn"><span>submit comment</span></button>
+
+					<button id="" type="submit" class="btn"><span>submit comment</span></button>
 				</div>
 			</form>
 			<div id="message"></div>
