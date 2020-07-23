@@ -27,8 +27,8 @@ def index(request: HttpRequest) -> HttpResponse:
         categories = Category.objects.filter(status=True)
         produit = Product.objects.filter(status=True).order_by('date_mod')[:5]
         prod = Product.objects.filter(status=True).order_by('date_mod')[:8]
-
-        data = {'produit': produit, 'prod': prod, 'categories': categories}
+        feedback = models.Contact.objects.filter(status=True)
+        data = {'produit': produit, 'prod': prod, 'categories': categories, 'feedback': feedback}
         return render(request, 'pages/index.html', data)
 
 
@@ -67,7 +67,7 @@ def contacts(request: HttpRequest) -> HttpResponse:
             'info': el,
         }
 
-        return render(request, 'pages/contacts.html')
+        return render(request, 'pages/contacts.html', data)
 
 #inscription
 def signup_form(request):
