@@ -1,6 +1,6 @@
 {% load static %}
 <!DOCTYPE html>
-<html lang="zxx">
+<html lang="fr">
 <head>
 	<meta charset="UTF-8">
 	<title>Creto</title>
@@ -61,12 +61,12 @@
 		</div>
 		<div class="header-menu">
 			<div class="container">
-				<a href="index.html" class="logo"><img src="{% static 'assets/img/logo.svg' %}" alt="logo"></a>
+				<a href="{% url 'home' %}" class="logo"><img src="{% static 'assets/img/logo.svg' %}" alt="logo"></a>
 				<nav class="nav-menu">
 					<ul class="nav-list">
-                        <li><a href="{% url 'home' %}">Home</a></li>
+                        <li><a href="{% url 'home' %}">Accueil</a></li>
 
-						<li><a href="shop/shop.html">Shop</a></li>
+						<li><a href="{% url 'shop:shop' %}">Boutique</a></li>
 						<li><a href="{% url 'gallery' %}">Gallery</a></li>
 						<li><a href="{% url 'contacts' %}">Contacts</a></li>
 					</ul>
@@ -83,51 +83,51 @@
 		<div class="container">
 			<div class="row footer-item-cover">
 				<div class="footer-subscribe col-md-7 col-lg-8">
-					<h6>subscribe</h6>
-					<p>Subscribe us and you won't miss the new arrivals, as well as discounts and sales.</p>
+					<h6>Inscrivez-Vous</h6>
+					<p>Souscrivez gratuitement à notre Newsletter Pour ne rien ratter sur les nouvelles arrivages</p>
 					<form class="subscribe-form">
 						<i class="fa fa-at" aria-hidden="true"></i>
 						<input class="inp-form" type="email" name="subscribe" placeholder="E-mail">
-						<button type="submit" class="btn btn-form"><span>send</span></button>
+						<button type="submit" class="btn btn-form"><span>Envoyer</span></button>
 					</form>
 				</div>
 				<div class="footer-item col-md-5 col-lg-4">
 					<h6>info</h6>
 					<ul class="footer-list">
-						<li><a href="shop/shop.html">FAQ</a></li>
-						<li><a href="shop/shop.html">Contacts</a></li>
-						<li><a href="shop/shop.html">Shipping + Heading</a></li>
-						<li><a href="shop/shop.html">Exchanges</a></li>
-						<li><a href="shop/shop.html">2019 Catalog</a></li>
-						<li><a href="shop/shop.html">Returns</a></li>
-						<li><a href="shop/shop.html">Search</a></li>
+						<li><a href="{% url 'shop:shop' %}">FAQ</a></li>
+						<li><a href="{% url 'contacts' %}">Contacts</a></li>
+						<li><a href="{% url 'shop:shop' %}">Shipping + Heading</a></li>
+						<li><a href="{% url 'shop:shop' %}">Exchanges</a></li>
+						<li><a href="{% url 'shop:shop' %}">2019 Catalog</a></li>
+						<li><a href="{% url 'shop:shop' %}">Returns</a></li>
+						<li><a href="{% url 'shop:shop' %}">Search</a></li>
 					</ul>
 				</div>
 			</div>
 			<div class="row footer-item-cover">
 				<div class="footer-touch col-md-7 col-lg-8">
-					<h6>stay in touch</h6>
+					<h6>Gardons le Contact</h6>
 					<ul class="footer-soc social-list">
 						<li><a target="_blank" href="https://www.facebook.com/rovadex"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
 						<li><a target="_blank" href="https://twitter.com/RovadexStudio"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
 						<li><a target="_blank" href="https://www.instagram.com/rovadex"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
 						<li><a target="_blank" href="https://www.youtube.com"><i class="fa fa-youtube-play" aria-hidden="true"></i></a></li>
 					</ul>
-					<div class="footer-autor">Questions? Please write us at: <a href="mailto:rovadex@gmail.com">rovadex@gmail.com</a></div>
+					<div class="footer-autor">Questions? Ecrivez-nous à: <a href="mailto:rovadex@gmail.com">rovadex@gmail.com</a></div>
 				</div>
 				<div class="footer-item col-md-5 col-lg-4">
 					<h6>shop</h6>
 					<ul class="footer-list">
-						<li><a href="shop/shop.html">Road Bike</a></li>
-						<li><a href="shop/shop.html">City Bike</a></li>
-						<li><a href="shop/shop.html">Mountain Bike</a></li>
-						<li><a href="shop/shop.html">Kids Bike</a></li>
-						<li><a href="shop/shop.html">BMX Bike</a></li>
+						<li><a href="{% url 'shop:shop' %}">Road Bike</a></li>
+						<li><a href="{% url 'shop:shop' %}">City Bike</a></li>
+						<li><a href="{% url 'shop:shop' %}">Mountain Bike</a></li>
+						<li><a href="{% url 'shop:shop' %}">Kids Bike</a></li>
+						<li><a href="{% url 'shop:shop' %}">BMX Bike</a></li>
 					</ul>
 				</div>
 			</div>
 			<div class="footer-bottom">
-				<div class="footer-copyright"><a target="_blank" href="https://rovadex.com">Rovadex</a> © 2019. All Rights Reserved.</div>
+				<div class="footer-copyright"><a target="_blank" href="https://rovadex.com">LastProject</a> © 2020. All Rights Reserved.</div>
 				<ul class="footer-pay">
 					<li><a href="#"><img src="{% static 'assets/img/footer-pay-1.png' %}" alt="img"></a></li>
 					<li><a href="#"><img src="{% static 'assets/img/footer-pay-2.png' %}" alt="img"></a></li>

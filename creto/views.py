@@ -14,15 +14,33 @@ from shop.models import Product
 
 # Create your views here.
 
+<<<<<<< HEAD
 def index(request):
     produit = Product.objects.filter().order_by('-id')[:5]
     prod = Product.objects.filter().order_by('?')[:8]
     data = {'produit':produit, 'prod':prod}
     return render(request, 'pages/index.html', data)
+=======
+def index(request: HttpRequest) -> HttpResponse:
+    if request.method == 'POST':
+        email = request.POST.get('subscribe')
+        print(email)
+        c = models.Suscribe(
+            email=email,
+        )
+        c.save()
+        return redirect('home')
+    else:
+        return render(request, 'pages/index.html')
+>>>>>>> 926dd522385aab4aa95472efb3683e8fa543b7eb
 
 
 def gallery(request):
-    return render(request, 'pages/gallery.html')
+    data = {
+        'gallery': models.PhotoGallery.objects.filter(status=True),
+    }
+    return render(request, 'pages/gallery.html', data)
+
 
 #
 # def contacts(request):
@@ -31,12 +49,11 @@ def gallery(request):
 
 def contacts(request: HttpRequest) -> HttpResponse:
     if request.method == 'POST':
-
-        nom = request.POST.get('name')
+        nom = request.POST.get('nom')
         phone = request.POST.get('phone')
         email = request.POST.get('email')
-        message = request.POST.get('comments')
-
+        message = request.POST.get('message')
+        print(nom, phone, email, message)
         c = models.Contact(
             nom=nom,
             phone=phone,
@@ -45,12 +62,13 @@ def contacts(request: HttpRequest) -> HttpResponse:
 
         )
         c.save()
-        return redirect('creto:index')
+        return redirect('contacts')
     else:
+        el = models.Creto.objects.first()
         data = {
-            'contacts': models.Contact.objects.filter(status=True),
-
+            'info': el,
         }
+<<<<<<< HEAD
         return render(request, 'pages/contacts.html')
 
 #inscription
@@ -95,3 +113,7 @@ def log_in(request):
 def log_out(request):
     logout(request)
     return HttpResponseRedirect('/')
+=======
+
+    return render(request, 'pages/contacts.html', data)
+>>>>>>> 926dd522385aab4aa95472efb3683e8fa543b7eb

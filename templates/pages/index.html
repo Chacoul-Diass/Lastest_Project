@@ -16,10 +16,10 @@
 					<div class="main-slide-info">
 						<h2 class="title">best bikes for you</h2>
 						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
-						<a href="shop/single-shop.html" class="btn"><span>buy now</span></a>
+						<a href="{% url 'shop:single' %}" class="btn"><span>buy now</span></a>
 					</div>
 					<div class="slide-img-cover">
-						<a href="shop/single-shop.html" class="lable-bike">
+						<a href="{% url 'shop:single' %}" class="lable-bike">
 							<div class="lable-bike-img"><img src="{% static 'assets/img/bike-info-slide.jpg' %}" alt="img"></div>
 							<div class="lable-bike-item">
 								<div class="model">model SX-200</div>
@@ -36,10 +36,10 @@
 					<div class="main-slide-info">
 						<h2 class="title">best bikes for you</h2>
 						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore consectetur sint iure id expedita saepe.</p>
-						<a href="shop/single-shop.html" class="btn"><span>buy now</span></a>
+						<a href="{% url 'shop:single' %}" class="btn"><span>buy now</span></a>
 					</div>
 					<div class="slide-img-cover">
-						<a href="shop/single-shop.html" class="lable-bike">
+						<a href="{% url 'shop:single' %}" class="lable-bike">
 							<div class="lable-bike-img"><img src="{% static 'assets/img/bike-info-slide.jpg' %}" alt="img"></div>
 							<div class="lable-bike-item">
 								<div class="model">model M-300</div>
@@ -56,10 +56,10 @@
 					<div class="main-slide-info">
 						<h2 class="title">best bikes for you</h2>
 						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis distinctio tenetur ab ut! Qui, facilis.</p>
-						<a href="shop/single-shop.html" class="btn"><span>buy now</span></a>
+						<a href="{% url 'shop:single' %}" class="btn"><span>buy now</span></a>
 					</div>
 					<div class="slide-img-cover">
-						<a href="shop/single-shop.html" class="lable-bike">
+						<a href="{% url 'shop:single' %}" class="lable-bike">
 							<div class="lable-bike-img"><img src="{% static 'assets/img/bike-info-slide.jpg' %}" alt="img"></div>
 							<div class="lable-bike-item">
 								<div class="model">model X-230</div>
@@ -76,10 +76,10 @@
 					<div class="main-slide-info">
 						<h2 class="title">best bikes for you</h2>
 						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
-						<a href="shop/single-shop.html" class="btn"><span>buy now</span></a>
+						<a href="{% url 'shop:single' %}" class="btn"><span>buy now</span></a>
 					</div>
 					<div class="slide-img-cover">
-						<a href="shop/single-shop.html" class="lable-bike">
+						<a href="{% url 'shop:single' %}" class="lable-bike">
 							<div class="lable-bike-img"><img src="{% static 'assets/img/bike-info-slide.jpg' %}" alt="img"></div>
 							<div class="lable-bike-item">
 								<div class="model">model SX-200</div>
@@ -96,10 +96,10 @@
 					<div class="main-slide-info">
 						<h2 class="title">best bikes for you</h2>
 						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore consectetur sint iure id expedita saepe.</p>
-						<a href="shop/single-shop.html" class="btn"><span>buy now</span></a>
+						<a href="{% url 'shop:single' %}" class="btn"><span>buy now</span></a>
 					</div>
 					<div class="slide-img-cover">
-						<a href="shop/single-shop.html" class="lable-bike">
+						<a href="{% url 'shop:single' %}" class="lable-bike">
 							<div class="lable-bike-img"><img src="{% static 'assets/img/bike-info-slide.jpg' %}" alt="img"></div>
 							<div class="lable-bike-item">
 								<div class="model">model M-300</div>
@@ -153,7 +153,7 @@
 							<option>BMC</option>
 						</select>
 					</li>
-					<li><a href="shop/shop.html" class="btn"><span>search</span></a></li>
+					<li><a href="{% url 'shop:shop' %}" class="btn"><span>search</span></a></li>
 				</ul>
 			</form>
 		</div>
@@ -169,7 +169,7 @@
 						<img src="{% static 'assets/img/categ-2.png' %}" alt="category">
 						<div class="categ-bicycle-info">
 							<h4 class="title">mountain <br>& road bikes</h4>
-							<a href="shop/shop.html" class="btn"><span>view more</span></a>
+							<a href="{% url 'shop:shop' %}" class="btn"><span>view more</span></a>
 						</div>
 					</div>
 				</div>
@@ -178,7 +178,7 @@
 						<img src="{% static 'assets/img/categ-3.png' %}" alt="category">
 						<div class="categ-bicycle-info">
 							<h4 class="title">bicycle <br>spare parts</h4>
-							<a href="shop/shop.html" class="btn"><span>view more</span></a>
+							<a href="{% url 'shop:shop' %}" class="btn"><span>view more</span></a>
 						</div>
 					</div>
 				</div>
@@ -187,7 +187,7 @@
 						<img src="{% static 'assets/img/categ-1.png' %}" alt="category">
 						<div class="categ-bicycle-info">
 							<h4 class="title">accessories <br>& clothing</h4>
-							<a href="shop/shop.html" class="btn"><span>view more</span></a>
+							<a href="{% url 'shop:shop' %}" class="btn"><span>view more</span></a>
 						</div>
 					</div>
 				</div>
@@ -196,7 +196,7 @@
 						<img src="{% static 'assets/img/categ-3.png' %}" alt="category">
 						<div class="categ-bicycle-info">
 							<h4 class="title">bicycle <br>spare parts</h4>
-							<a href="shop/shop.html" class="btn"><span>view more</span></a>
+							<a href="{% url 'shop:shop' %}" class="btn"><span>view more</span></a>
 						</div>
 					</div>
 				</div>
@@ -248,6 +248,7 @@
 				<div class="tabs-content">
 					<div class="tab tab1">
 						<div class="row product-cover">
+<<<<<<< HEAD
 							{% for pr in produit %}
 								<div class="col-sm-6 col-lg-3">
 
@@ -256,6 +257,31 @@
 										<ul class="product-icon-top">
 											<li><a href="#"><i class="fa fa-refresh" aria-hidden="true"></i></a></li>
 											<li><a href="#"><i class="fa fa-heart" aria-hidden="true"></i></a></li>
+=======
+							<div class="col-sm-6 col-lg-3">
+								<div class="product-item">
+									<span class="top-sale">top sale</span>
+									<ul class="product-icon-top">
+										<li><a href="#"><i class="fa fa-refresh" aria-hidden="true"></i></a></li>
+										<li><a href="#"><i class="fa fa-heart" aria-hidden="true"></i></a></li>
+									</ul>
+									<a href="{% url 'shop:single' %}" class="product-img"><img class="lazy" src="{% static 'assets/img/placeholder-all.png' %}" data-src="{% static 'assets/img/prod-1.png' %}" alt="product"></a>
+									<div class="product-item-cover">
+										<div class="price-cover">
+											<div class="new-price">$1.699</div>
+											<div class="old-price">$1.799</div>
+										</div>
+										<h6 class="prod-title"><a href="{% url 'shop:single' %}">Granite Peak 24" <br>Girls Mountain Bike</a></h6>
+										<a href="{% url 'shop:single' %}" class="btn"><span>buy now</span></a>
+									</div>
+									<div class="prod-info">
+										<ul class="prod-list">
+											<li>Frame Size: <span>17</span></li>
+											<li>Class: <span>City</span></li>
+											<li>Number of speeds: <span>7</span></li>
+											<li>Type: <span>Rigid</span></li>
+											<li>Country registration: <span>USA</span></li>
+>>>>>>> 926dd522385aab4aa95472efb3683e8fa543b7eb
 										</ul>
 										<a href="addtocart/{{pr.id}}" class="product-img">
 											{% if pr.image1 %}
@@ -290,13 +316,13 @@
 										<li><a href="#"><i class="fa fa-refresh" aria-hidden="true"></i></a></li>
 										<li><a href="#"><i class="fa fa-heart" aria-hidden="true"></i></a></li>
 									</ul>
-									<a href="shop/single-shop.html" class="product-img"><img class="lazy" src="{% static 'assets/img/placeholder-all.png' %}" data-src="{% static 'assets/img/prod-2.png' %}" alt="product"></a>
+									<a href="{% url 'shop:single' %}" class="product-img"><img class="lazy" src="{% static 'assets/img/placeholder-all.png' %}" data-src="{% static 'assets/img/prod-2.png' %}" alt="product"></a>
 									<div class="product-item-cover">
 										<div class="price-cover">
 											<div class="new-price">$1.699</div>
 										</div>
-										<h6 class="prod-title"><a href="shop/single-shop.html">Hyper E-Ride Bike 700C <br>20+ Mile Range</a></h6>
-										<a href="shop/single-shop.html" class="btn"><span>buy now</span></a>
+										<h6 class="prod-title"><a href="{% url 'shop:single' %}">Hyper E-Ride Bike 700C <br>20+ Mile Range</a></h6>
+										<a href="{% url 'shop:single' %}" class="btn"><span>buy now</span></a>
 									</div>
 									<div class="prod-info">
 										<ul class="prod-list">
@@ -316,14 +342,14 @@
 										<li><a href="#"><i class="fa fa-refresh" aria-hidden="true"></i></a></li>
 										<li><a href="#"><i class="fa fa-heart" aria-hidden="true"></i></a></li>
 									</ul>
-									<a href="shop/single-shop.html" class="product-img"><img class="lazy" src="{% static 'assets/img/placeholder-all.png' %}" data-src="{% static 'assets/img/prod-3.png' %}" alt="product"></a>
+									<a href="{% url 'shop:single' %}" class="product-img"><img class="lazy" src="{% static 'assets/img/placeholder-all.png' %}" data-src="{% static 'assets/img/prod-3.png' %}" alt="product"></a>
 									<div class="product-item-cover">
 										<div class="price-cover">
 											<div class="new-price">$1.699</div>
 											<div class="old-price">$1.799</div>
 										</div>
-										<h6 class="prod-title"><a href="shop/single-shop.html">Lightweight M370-27speed <br>Aluminum Alloy Mantis</a></h6>
-										<a href="shop/single-shop.html" class="btn"><span>buy now</span></a>
+										<h6 class="prod-title"><a href="{% url 'shop:single' %}">Lightweight M370-27speed <br>Aluminum Alloy Mantis</a></h6>
+										<a href="{% url 'shop:single' %}" class="btn"><span>buy now</span></a>
 									</div>
 									<div class="prod-info">
 										<ul class="prod-list">
@@ -342,13 +368,13 @@
 										<li><a href="#"><i class="fa fa-refresh" aria-hidden="true"></i></a></li>
 										<li><a href="#"><i class="fa fa-heart" aria-hidden="true"></i></a></li>
 									</ul>
-									<a href="shop/single-shop.html" class="product-img"><img class="lazy" src="{% static 'assets/img/placeholder-all.png' %}" data-src="{% static 'assets/img/prod-4.png' %}" alt="product"></a>
+									<a href="{% url 'shop:single' %}" class="product-img"><img class="lazy" src="{% static 'assets/img/placeholder-all.png' %}" data-src="{% static 'assets/img/prod-4.png' %}" alt="product"></a>
 									<div class="product-item-cover">
 										<div class="price-cover">
 											<div class="new-price">$1.699</div>
 										</div>
-										<h6 class="prod-title"><a href="shop/single-shop.html">New Spring Beach Cruiser <br>Bicycle Chrome</a></h6>
-										<a href="shop/single-shop.html" class="btn"><span>buy now</span></a>
+										<h6 class="prod-title"><a href="{% url 'shop:single' %}">New Spring Beach Cruiser <br>Bicycle Chrome</a></h6>
+										<a href="{% url 'shop:single' %}" class="btn"><span>buy now</span></a>
 									</div>
 									<div class="prod-info">
 										<ul class="prod-list">
@@ -367,13 +393,13 @@
 										<li><a href="#"><i class="fa fa-refresh" aria-hidden="true"></i></a></li>
 										<li><a href="#"><i class="fa fa-heart" aria-hidden="true"></i></a></li>
 									</ul>
-									<a href="shop/single-shop.html" class="product-img"><img class="lazy" src="{% static 'assets/img/placeholder-all.png' %}" data-src="{% static 'assets/img/prod-5.png' %}" alt="product"></a>
+									<a href="{% url 'shop:single' %}" class="product-img"><img class="lazy" src="{% static 'assets/img/placeholder-all.png' %}" data-src="{% static 'assets/img/prod-5.png' %}" alt="product"></a>
 									<div class="product-item-cover">
 										<div class="price-cover">
 											<div class="new-price">$1.699</div>
 										</div>
-										<h6 class="prod-title"><a href="shop/single-shop.html">Granite Peak 24" <br>Girls Mountain Bike</a></h6>
-										<a href="shop/single-shop.html" class="btn"><span>buy now</span></a>
+										<h6 class="prod-title"><a href="{% url 'shop:single' %}">Granite Peak 24" <br>Girls Mountain Bike</a></h6>
+										<a href="{% url 'shop:single' %}" class="btn"><span>buy now</span></a>
 									</div>
 									<div class="prod-info">
 										<ul class="prod-list">
@@ -392,13 +418,13 @@
 										<li><a href="#"><i class="fa fa-refresh" aria-hidden="true"></i></a></li>
 										<li><a href="#"><i class="fa fa-heart" aria-hidden="true"></i></a></li>
 									</ul>
-									<a href="shop/single-shop.html" class="product-img"><img class="lazy" src="{% static 'assets/img/placeholder-all.png' %}" data-src="{% static 'assets/img/prod-6.png' %}" alt="product"></a>
+									<a href="{% url 'shop:single' %}" class="product-img"><img class="lazy" src="{% static 'assets/img/placeholder-all.png' %}" data-src="{% static 'assets/img/prod-6.png' %}" alt="product"></a>
 									<div class="product-item-cover">
 										<div class="price-cover">
 											<div class="new-price">$1.699</div>
 										</div>
-										<h6 class="prod-title"><a href="shop/single-shop.html">Aluminum and Fork <br>Mountain Sr-26omg</a></h6>
-										<a href="shop/single-shop.html" class="btn"><span>buy now</span></a>
+										<h6 class="prod-title"><a href="{% url 'shop:single' %}">Aluminum and Fork <br>Mountain Sr-26omg</a></h6>
+										<a href="{% url 'shop:single' %}" class="btn"><span>buy now</span></a>
 									</div>
 									<div class="prod-info">
 										<ul class="prod-list">
@@ -417,13 +443,13 @@
 										<li><a href="#"><i class="fa fa-refresh" aria-hidden="true"></i></a></li>
 										<li><a href="#"><i class="fa fa-heart" aria-hidden="true"></i></a></li>
 									</ul>
-									<a href="shop/single-shop.html" class="product-img"><img class="lazy" src="{% static 'assets/img/placeholder-all.png' %}" data-src="{% static 'assets/img/prod-7.png' %}" alt="product"></a>
+									<a href="{% url 'shop:single' %}" class="product-img"><img class="lazy" src="{% static 'assets/img/placeholder-all.png' %}" data-src="{% static 'assets/img/prod-7.png' %}" alt="product"></a>
 									<div class="product-item-cover">
 										<div class="price-cover">
 											<div class="new-price">$1.699</div>
 										</div>
-										<h6 class="prod-title"><a href="shop/single-shop.html">Steel Frame MTB Bike <br>with 21 Speed</a></h6>
-										<a href="shop/single-shop.html" class="btn"><span>buy now</span></a>
+										<h6 class="prod-title"><a href="{% url 'shop:single' %}">Steel Frame MTB Bike <br>with 21 Speed</a></h6>
+										<a href="{% url 'shop:single' %}" class="btn"><span>buy now</span></a>
 									</div>
 									<div class="prod-info">
 										<ul class="prod-list">
@@ -442,13 +468,13 @@
 										<li><a href="#"><i class="fa fa-refresh" aria-hidden="true"></i></a></li>
 										<li><a href="#"><i class="fa fa-heart" aria-hidden="true"></i></a></li>
 									</ul>
-									<a href="shop/single-shop.html" class="product-img"><img class="lazy" src="{% static 'assets/img/placeholder-all.png' %}" data-src="{% static 'assets/img/prod-8.png' %}" alt="product"></a>
+									<a href="{% url 'shop:single' %}" class="product-img"><img class="lazy" src="{% static 'assets/img/placeholder-all.png' %}" data-src="{% static 'assets/img/prod-8.png' %}" alt="product"></a>
 									<div class="product-item-cover">
 										<div class="price-cover">
 											<div class="new-price">$1.699</div>
 										</div>
-										<h6 class="prod-title"><a href="shop/single-shop.html">Leopard Rider No Chain <br>Mountain Bicycle</a></h6>
-										<a href="shop/single-shop.html" class="btn"><span>buy now</span></a>
+										<h6 class="prod-title"><a href="{% url 'shop:single' %}">Leopard Rider No Chain <br>Mountain Bicycle</a></h6>
+										<a href="{% url 'shop:single' %}" class="btn"><span>buy now</span></a>
 									</div>
 									<div class="prod-info">
 										<ul class="prod-list">
@@ -471,13 +497,13 @@
 										<li><a href="#"><i class="fa fa-refresh" aria-hidden="true"></i></a></li>
 										<li><a href="#"><i class="fa fa-heart" aria-hidden="true"></i></a></li>
 									</ul>
-									<a href="shop/single-shop.html" class="product-img"><img class="lazy" src="{% static 'assets/img/placeholder-all.png' %}" data-src="{% static 'assets/img/prod-5.png' %}" alt="product"></a>
+									<a href="{% url 'shop:single' %}" class="product-img"><img class="lazy" src="{% static 'assets/img/placeholder-all.png' %}" data-src="{% static 'assets/img/prod-5.png' %}" alt="product"></a>
 									<div class="product-item-cover">
 										<div class="price-cover">
 											<div class="new-price">$1.699</div>
 										</div>
-										<h6 class="prod-title"><a href="shop/single-shop.html">Granite Peak 24" <br>Girls Mountain Bike</a></h6>
-										<a href="shop/single-shop.html" class="btn"><span>buy now</span></a>
+										<h6 class="prod-title"><a href="{% url 'shop:single' %}">Granite Peak 24" <br>Girls Mountain Bike</a></h6>
+										<a href="{% url 'shop:single' %}" class="btn"><span>buy now</span></a>
 									</div>
 									<div class="prod-info">
 										<ul class="prod-list">
@@ -496,13 +522,13 @@
 										<li><a href="#"><i class="fa fa-refresh" aria-hidden="true"></i></a></li>
 										<li><a href="#"><i class="fa fa-heart" aria-hidden="true"></i></a></li>
 									</ul>
-									<a href="shop/single-shop.html" class="product-img"><img class="lazy" src="{% static 'assets/img/placeholder-all.png' %}" data-src="{% static 'assets/img/prod-6.png' %}" alt="product"></a>
+									<a href="{% url 'shop:single' %}" class="product-img"><img class="lazy" src="{% static 'assets/img/placeholder-all.png' %}" data-src="{% static 'assets/img/prod-6.png' %}" alt="product"></a>
 									<div class="product-item-cover">
 										<div class="price-cover">
 											<div class="new-price">$1.699</div>
 										</div>
-										<h6 class="prod-title"><a href="shop/single-shop.html">Aluminum and Fork <br>Mountain Sr-26omg</a></h6>
-										<a href="shop/single-shop.html" class="btn"><span>buy now</span></a>
+										<h6 class="prod-title"><a href="{% url 'shop:single' %}">Aluminum and Fork <br>Mountain Sr-26omg</a></h6>
+										<a href="{% url 'shop:single' %}" class="btn"><span>buy now</span></a>
 									</div>
 									<div class="prod-info">
 										<ul class="prod-list">
@@ -522,14 +548,14 @@
 										<li><a href="#"><i class="fa fa-refresh" aria-hidden="true"></i></a></li>
 										<li><a href="#"><i class="fa fa-heart" aria-hidden="true"></i></a></li>
 									</ul>
-									<a href="shop/single-shop.html" class="product-img"><img class="lazy" src="{% static 'assets/img/placeholder-all.png' %}" data-src="{% static 'assets/img/prod-1.png' %}" alt="product"></a>
+									<a href="{% url 'shop:single' %}" class="product-img"><img class="lazy" src="{% static 'assets/img/placeholder-all.png' %}" data-src="{% static 'assets/img/prod-1.png' %}" alt="product"></a>
 									<div class="product-item-cover">
 										<div class="price-cover">
 											<div class="new-price">$1.699</div>
 											<div class="old-price">$1.799</div>
 										</div>
-										<h6 class="prod-title"><a href="shop/single-shop.html">Granite Peak 24" <br>Girls Mountain Bike</a></h6>
-										<a href="shop/single-shop.html" class="btn"><span>buy now</span></a>
+										<h6 class="prod-title"><a href="{% url 'shop:single' %}">Granite Peak 24" <br>Girls Mountain Bike</a></h6>
+										<a href="{% url 'shop:single' %}" class="btn"><span>buy now</span></a>
 									</div>
 									<div class="prod-info">
 										<ul class="prod-list">
@@ -548,13 +574,13 @@
 										<li><a href="#"><i class="fa fa-refresh" aria-hidden="true"></i></a></li>
 										<li><a href="#"><i class="fa fa-heart" aria-hidden="true"></i></a></li>
 									</ul>
-									<a href="shop/single-shop.html" class="product-img"><img class="lazy" src="{% static 'assets/img/placeholder-all.png' %}" data-src="{% static 'assets/img/prod-2.png' %}" alt="product"></a>
+									<a href="{% url 'shop:single' %}" class="product-img"><img class="lazy" src="{% static 'assets/img/placeholder-all.png' %}" data-src="{% static 'assets/img/prod-2.png' %}" alt="product"></a>
 									<div class="product-item-cover">
 										<div class="price-cover">
 											<div class="new-price">$1.699</div>
 										</div>
-										<h6 class="prod-title"><a href="shop/single-shop.html">Hyper E-Ride Bike 700C <br>20+ Mile Range</a></h6>
-										<a href="shop/single-shop.html" class="btn"><span>buy now</span></a>
+										<h6 class="prod-title"><a href="{% url 'shop:single' %}">Hyper E-Ride Bike 700C <br>20+ Mile Range</a></h6>
+										<a href="{% url 'shop:single' %}" class="btn"><span>buy now</span></a>
 									</div>
 									<div class="prod-info">
 										<ul class="prod-list">
@@ -574,14 +600,14 @@
 										<li><a href="#"><i class="fa fa-refresh" aria-hidden="true"></i></a></li>
 										<li><a href="#"><i class="fa fa-heart" aria-hidden="true"></i></a></li>
 									</ul>
-									<a href="shop/single-shop.html" class="product-img"><img class="lazy" src="{% static 'assets/img/placeholder-all.png' %}" data-src="{% static 'assets/img/prod-3.png' %}" alt="product"></a>
+									<a href="{% url 'shop:single' %}" class="product-img"><img class="lazy" src="{% static 'assets/img/placeholder-all.png' %}" data-src="{% static 'assets/img/prod-3.png' %}" alt="product"></a>
 									<div class="product-item-cover">
 										<div class="price-cover">
 											<div class="new-price">$1.699</div>
 											<div class="old-price">$1.799</div>
 										</div>
-										<h6 class="prod-title"><a href="shop/single-shop.html">Lightweight M370-27speed <br>Aluminum Alloy Mantis</a></h6>
-										<a href="shop/single-shop.html" class="btn"><span>buy now</span></a>
+										<h6 class="prod-title"><a href="{% url 'shop:single' %}">Lightweight M370-27speed <br>Aluminum Alloy Mantis</a></h6>
+										<a href="{% url 'shop:single' %}" class="btn"><span>buy now</span></a>
 									</div>
 									<div class="prod-info">
 										<ul class="prod-list">
@@ -600,13 +626,13 @@
 										<li><a href="#"><i class="fa fa-refresh" aria-hidden="true"></i></a></li>
 										<li><a href="#"><i class="fa fa-heart" aria-hidden="true"></i></a></li>
 									</ul>
-									<a href="shop/single-shop.html" class="product-img"><img class="lazy" src="{% static 'assets/img/placeholder-all.png' %}" data-src="{% static 'assets/img/prod-4.png' %}" alt="product"></a>
+									<a href="{% url 'shop:single' %}" class="product-img"><img class="lazy" src="{% static 'assets/img/placeholder-all.png' %}" data-src="{% static 'assets/img/prod-4.png' %}" alt="product"></a>
 									<div class="product-item-cover">
 										<div class="price-cover">
 											<div class="new-price">$1.699</div>
 										</div>
-										<h6 class="prod-title"><a href="shop/single-shop.html">New Spring Beach Cruiser <br>Bicycle Chrome</a></h6>
-										<a href="shop/single-shop.html" class="btn"><span>buy now</span></a>
+										<h6 class="prod-title"><a href="{% url 'shop:single' %}">New Spring Beach Cruiser <br>Bicycle Chrome</a></h6>
+										<a href="{% url 'shop:single' %}" class="btn"><span>buy now</span></a>
 									</div>
 									<div class="prod-info">
 										<ul class="prod-list">
@@ -625,13 +651,13 @@
 										<li><a href="#"><i class="fa fa-refresh" aria-hidden="true"></i></a></li>
 										<li><a href="#"><i class="fa fa-heart" aria-hidden="true"></i></a></li>
 									</ul>
-									<a href="shop/single-shop.html" class="product-img"><img class="lazy" src="{% static 'assets/img/placeholder-all.png' %}" data-src="{% static 'assets/img/prod-7.png' %}" alt="product"></a>
+									<a href="{% url 'shop:single' %}" class="product-img"><img class="lazy" src="{% static 'assets/img/placeholder-all.png' %}" data-src="{% static 'assets/img/prod-7.png' %}" alt="product"></a>
 									<div class="product-item-cover">
 										<div class="price-cover">
 											<div class="new-price">$1.699</div>
 										</div>
-										<h6 class="prod-title"><a href="shop/single-shop.html">Steel Frame MTB Bike <br>with 21 Speed</a></h6>
-										<a href="shop/single-shop.html" class="btn"><span>buy now</span></a>
+										<h6 class="prod-title"><a href="{% url 'shop:single' %}">Steel Frame MTB Bike <br>with 21 Speed</a></h6>
+										<a href="{% url 'shop:single' %}" class="btn"><span>buy now</span></a>
 									</div>
 									<div class="prod-info">
 										<ul class="prod-list">
@@ -650,13 +676,13 @@
 										<li><a href="#"><i class="fa fa-refresh" aria-hidden="true"></i></a></li>
 										<li><a href="#"><i class="fa fa-heart" aria-hidden="true"></i></a></li>
 									</ul>
-									<a href="shop/single-shop.html" class="product-img"><img class="lazy" src="{% static 'assets/img/placeholder-all.png' %}" data-src="{% static 'assets/img/prod-8.png' %}" alt="product"></a>
+									<a href="{% url 'shop:single' %}" class="product-img"><img class="lazy" src="{% static 'assets/img/placeholder-all.png' %}" data-src="{% static 'assets/img/prod-8.png' %}" alt="product"></a>
 									<div class="product-item-cover">
 										<div class="price-cover">
 											<div class="new-price">$1.699</div>
 										</div>
-										<h6 class="prod-title"><a href="shop/single-shop.html">Leopard Rider No Chain <br>Mountain Bicycle</a></h6>
-										<a href="shop/single-shop.html" class="btn"><span>buy now</span></a>
+										<h6 class="prod-title"><a href="{% url 'shop:single' %}">Leopard Rider No Chain <br>Mountain Bicycle</a></h6>
+										<a href="{% url 'shop:single' %}" class="btn"><span>buy now</span></a>
 									</div>
 									<div class="prod-info">
 										<ul class="prod-list">
@@ -680,14 +706,14 @@
 										<li><a href="#"><i class="fa fa-refresh" aria-hidden="true"></i></a></li>
 										<li><a href="#"><i class="fa fa-heart" aria-hidden="true"></i></a></li>
 									</ul>
-									<a href="shop/single-shop.html" class="product-img"><img class="lazy" src="{% static 'assets/img/placeholder-all.png' %}" data-src="{% static 'assets/img/prod-3.png' %}" alt="product"></a>
+									<a href="{% url 'shop:single' %}" class="product-img"><img class="lazy" src="{% static 'assets/img/placeholder-all.png' %}" data-src="{% static 'assets/img/prod-3.png' %}" alt="product"></a>
 									<div class="product-item-cover">
 										<div class="price-cover">
 											<div class="new-price">$1.699</div>
 											<div class="old-price">$1.799</div>
 										</div>
-										<h6 class="prod-title"><a href="shop/single-shop.html">Lightweight M370-27speed <br>Aluminum Alloy Mantis</a></h6>
-										<a href="shop/single-shop.html" class="btn"><span>buy now</span></a>
+										<h6 class="prod-title"><a href="{% url 'shop:single' %}">Lightweight M370-27speed <br>Aluminum Alloy Mantis</a></h6>
+										<a href="{% url 'shop:single' %}" class="btn"><span>buy now</span></a>
 									</div>
 									<div class="prod-info">
 										<ul class="prod-list">
@@ -706,13 +732,13 @@
 										<li><a href="#"><i class="fa fa-refresh" aria-hidden="true"></i></a></li>
 										<li><a href="#"><i class="fa fa-heart" aria-hidden="true"></i></a></li>
 									</ul>
-									<a href="shop/single-shop.html" class="product-img"><img class="lazy" src="{% static 'assets/img/placeholder-all.png' %}" data-src="{% static 'assets/img/prod-4.png' %}" alt="product"></a>
+									<a href="{% url 'shop:single' %}" class="product-img"><img class="lazy" src="{% static 'assets/img/placeholder-all.png' %}" data-src="{% static 'assets/img/prod-4.png' %}" alt="product"></a>
 									<div class="product-item-cover">
 										<div class="price-cover">
 											<div class="new-price">$1.699</div>
 										</div>
-										<h6 class="prod-title"><a href="shop/single-shop.html">New Spring Beach Cruiser <br>Bicycle Chrome</a></h6>
-										<a href="shop/single-shop.html" class="btn"><span>buy now</span></a>
+										<h6 class="prod-title"><a href="{% url 'shop:single' %}">New Spring Beach Cruiser <br>Bicycle Chrome</a></h6>
+										<a href="{% url 'shop:single' %}" class="btn"><span>buy now</span></a>
 									</div>
 									<div class="prod-info">
 										<ul class="prod-list">
@@ -731,13 +757,13 @@
 										<li><a href="#"><i class="fa fa-refresh" aria-hidden="true"></i></a></li>
 										<li><a href="#"><i class="fa fa-heart" aria-hidden="true"></i></a></li>
 									</ul>
-									<a href="shop/single-shop.html" class="product-img"><img class="lazy" src="{% static 'assets/img/placeholder-all.png' %}" data-src="{% static 'assets/img/prod-5.png' %}" alt="product"></a>
+									<a href="{% url 'shop:single' %}" class="product-img"><img class="lazy" src="{% static 'assets/img/placeholder-all.png' %}" data-src="{% static 'assets/img/prod-5.png' %}" alt="product"></a>
 									<div class="product-item-cover">
 										<div class="price-cover">
 											<div class="new-price">$1.699</div>
 										</div>
-										<h6 class="prod-title"><a href="shop/single-shop.html">Granite Peak 24" <br>Girls Mountain Bike</a></h6>
-										<a href="shop/single-shop.html" class="btn"><span>buy now</span></a>
+										<h6 class="prod-title"><a href="{% url 'shop:single' %}">Granite Peak 24" <br>Girls Mountain Bike</a></h6>
+										<a href="{% url 'shop:single' %}" class="btn"><span>buy now</span></a>
 									</div>
 									<div class="prod-info">
 										<ul class="prod-list">
@@ -756,13 +782,13 @@
 										<li><a href="#"><i class="fa fa-refresh" aria-hidden="true"></i></a></li>
 										<li><a href="#"><i class="fa fa-heart" aria-hidden="true"></i></a></li>
 									</ul>
-									<a href="shop/single-shop.html" class="product-img"><img class="lazy" src="{% static 'assets/img/placeholder-all.png' %}" data-src="{% static 'assets/img/prod-6.png' %}" alt="product"></a>
+									<a href="{% url 'shop:single' %}" class="product-img"><img class="lazy" src="{% static 'assets/img/placeholder-all.png' %}" data-src="{% static 'assets/img/prod-6.png' %}" alt="product"></a>
 									<div class="product-item-cover">
 										<div class="price-cover">
 											<div class="new-price">$1.699</div>
 										</div>
-										<h6 class="prod-title"><a href="shop/single-shop.html">Aluminum and Fork <br>Mountain Sr-26omg</a></h6>
-										<a href="shop/single-shop.html" class="btn"><span>buy now</span></a>
+										<h6 class="prod-title"><a href="{% url 'shop:single' %}">Aluminum and Fork <br>Mountain Sr-26omg</a></h6>
+										<a href="{% url 'shop:single' %}" class="btn"><span>buy now</span></a>
 									</div>
 									<div class="prod-info">
 										<ul class="prod-list">
@@ -782,14 +808,14 @@
 										<li><a href="#"><i class="fa fa-refresh" aria-hidden="true"></i></a></li>
 										<li><a href="#"><i class="fa fa-heart" aria-hidden="true"></i></a></li>
 									</ul>
-									<a href="shop/single-shop.html" class="product-img"><img class="lazy" src="{% static 'assets/img/placeholder-all.png' %}" data-src="{% static 'assets/img/prod-1.png' %}" alt="product"></a>
+									<a href="{% url 'shop:single' %}" class="product-img"><img class="lazy" src="{% static 'assets/img/placeholder-all.png' %}" data-src="{% static 'assets/img/prod-1.png' %}" alt="product"></a>
 									<div class="product-item-cover">
 										<div class="price-cover">
 											<div class="new-price">$1.699</div>
 											<div class="old-price">$1.799</div>
 										</div>
-										<h6 class="prod-title"><a href="shop/single-shop.html">Granite Peak 24" <br>Girls Mountain Bike</a></h6>
-										<a href="shop/single-shop.html" class="btn"><span>buy now</span></a>
+										<h6 class="prod-title"><a href="{% url 'shop:single' %}">Granite Peak 24" <br>Girls Mountain Bike</a></h6>
+										<a href="{% url 'shop:single' %}" class="btn"><span>buy now</span></a>
 									</div>
 									<div class="prod-info">
 										<ul class="prod-list">
@@ -808,13 +834,13 @@
 										<li><a href="#"><i class="fa fa-refresh" aria-hidden="true"></i></a></li>
 										<li><a href="#"><i class="fa fa-heart" aria-hidden="true"></i></a></li>
 									</ul>
-									<a href="shop/single-shop.html" class="product-img"><img class="lazy" src="{% static 'assets/img/placeholder-all.png' %}" data-src="{% static 'assets/img/prod-2.png' %}" alt="product"></a>
+									<a href="{% url 'shop:single' %}" class="product-img"><img class="lazy" src="{% static 'assets/img/placeholder-all.png' %}" data-src="{% static 'assets/img/prod-2.png' %}" alt="product"></a>
 									<div class="product-item-cover">
 										<div class="price-cover">
 											<div class="new-price">$1.699</div>
 										</div>
-										<h6 class="prod-title"><a href="shop/single-shop.html">Hyper E-Ride Bike 700C <br>20+ Mile Range</a></h6>
-										<a href="shop/single-shop.html" class="btn"><span>buy now</span></a>
+										<h6 class="prod-title"><a href="{% url 'shop:single' %}">Hyper E-Ride Bike 700C <br>20+ Mile Range</a></h6>
+										<a href="{% url 'shop:single' %}" class="btn"><span>buy now</span></a>
 									</div>
 									<div class="prod-info">
 										<ul class="prod-list">
@@ -833,13 +859,13 @@
 										<li><a href="#"><i class="fa fa-refresh" aria-hidden="true"></i></a></li>
 										<li><a href="#"><i class="fa fa-heart" aria-hidden="true"></i></a></li>
 									</ul>
-									<a href="shop/single-shop.html" class="product-img"><img class="lazy" src="{% static 'assets/img/placeholder-all.png' %}" data-src="{% static 'assets/img/prod-7.png' %}" alt="product"></a>
+									<a href="{% url 'shop:single' %}" class="product-img"><img class="lazy" src="{% static 'assets/img/placeholder-all.png' %}" data-src="{% static 'assets/img/prod-7.png' %}" alt="product"></a>
 									<div class="product-item-cover">
 										<div class="price-cover">
 											<div class="new-price">$1.699</div>
 										</div>
-										<h6 class="prod-title"><a href="shop/single-shop.html">Steel Frame MTB Bike <br>with 21 Speed</a></h6>
-										<a href="shop/single-shop.html" class="btn"><span>buy now</span></a>
+										<h6 class="prod-title"><a href="{% url 'shop:single' %}">Steel Frame MTB Bike <br>with 21 Speed</a></h6>
+										<a href="{% url 'shop:single' %}" class="btn"><span>buy now</span></a>
 									</div>
 									<div class="prod-info">
 										<ul class="prod-list">
@@ -858,13 +884,13 @@
 										<li><a href="#"><i class="fa fa-refresh" aria-hidden="true"></i></a></li>
 										<li><a href="#"><i class="fa fa-heart" aria-hidden="true"></i></a></li>
 									</ul>
-									<a href="shop/single-shop.html" class="product-img"><img class="lazy" src="{% static 'assets/img/placeholder-all.png' %}" data-src="{% static 'assets/img/prod-8.png' %}" alt="product"></a>
+									<a href="{% url 'shop:single' %}" class="product-img"><img class="lazy" src="{% static 'assets/img/placeholder-all.png' %}" data-src="{% static 'assets/img/prod-8.png' %}" alt="product"></a>
 									<div class="product-item-cover">
 										<div class="price-cover">
 											<div class="new-price">$1.699</div>
 										</div>
-										<h6 class="prod-title"><a href="shop/single-shop.html">Leopard Rider No Chain <br>Mountain Bicycle</a></h6>
-										<a href="shop/single-shop.html" class="btn"><span>buy now</span></a>
+										<h6 class="prod-title"><a href="{% url 'shop:single' %}">Leopard Rider No Chain <br>Mountain Bicycle</a></h6>
+										<a href="{% url 'shop:single' %}" class="btn"><span>buy now</span></a>
 									</div>
 									<div class="prod-info">
 										<ul class="prod-list">
@@ -887,13 +913,13 @@
 										<li><a href="#"><i class="fa fa-refresh" aria-hidden="true"></i></a></li>
 										<li><a href="#"><i class="fa fa-heart" aria-hidden="true"></i></a></li>
 									</ul>
-									<a href="shop/single-shop.html" class="product-img"><img class="lazy" src="{% static 'assets/img/placeholder-all.png' %}" data-src="{% static 'assets/img/prod-5.png' %}" alt="product"></a>
+									<a href="{% url 'shop:single' %}" class="product-img"><img class="lazy" src="{% static 'assets/img/placeholder-all.png' %}" data-src="{% static 'assets/img/prod-5.png' %}" alt="product"></a>
 									<div class="product-item-cover">
 										<div class="price-cover">
 											<div class="new-price">$1.699</div>
 										</div>
-										<h6 class="prod-title"><a href="shop/single-shop.html">Granite Peak 24" <br>Girls Mountain Bike</a></h6>
-										<a href="shop/single-shop.html" class="btn"><span>buy now</span></a>
+										<h6 class="prod-title"><a href="{% url 'shop:single' %}">Granite Peak 24" <br>Girls Mountain Bike</a></h6>
+										<a href="{% url 'shop:single' %}" class="btn"><span>buy now</span></a>
 									</div>
 									<div class="prod-info">
 										<ul class="prod-list">
@@ -912,13 +938,13 @@
 										<li><a href="#"><i class="fa fa-refresh" aria-hidden="true"></i></a></li>
 										<li><a href="#"><i class="fa fa-heart" aria-hidden="true"></i></a></li>
 									</ul>
-									<a href="shop/single-shop.html" class="product-img"><img class="lazy" src="{% static 'assets/img/placeholder-all.png' %}" data-src="{% static 'assets/img/prod-6.png' %}" alt="product"></a>
+									<a href="{% url 'shop:single' %}" class="product-img"><img class="lazy" src="{% static 'assets/img/placeholder-all.png' %}" data-src="{% static 'assets/img/prod-6.png' %}" alt="product"></a>
 									<div class="product-item-cover">
 										<div class="price-cover">
 											<div class="new-price">$1.699</div>
 										</div>
-										<h6 class="prod-title"><a href="shop/single-shop.html">Aluminum and Fork <br>Mountain Sr-26omg</a></h6>
-										<a href="shop/single-shop.html" class="btn"><span>buy now</span></a>
+										<h6 class="prod-title"><a href="{% url 'shop:single' %}">Aluminum and Fork <br>Mountain Sr-26omg</a></h6>
+										<a href="{% url 'shop:single' %}" class="btn"><span>buy now</span></a>
 									</div>
 									<div class="prod-info">
 										<ul class="prod-list">
@@ -938,14 +964,14 @@
 										<li><a href="#"><i class="fa fa-refresh" aria-hidden="true"></i></a></li>
 										<li><a href="#"><i class="fa fa-heart" aria-hidden="true"></i></a></li>
 									</ul>
-									<a href="shop/single-shop.html" class="product-img"><img class="lazy" src="{% static 'assets/img/placeholder-all.png' %}" data-src="{% static 'assets/img/prod-1.png' %}" alt="product"></a>
+									<a href="{% url 'shop:single' %}" class="product-img"><img class="lazy" src="{% static 'assets/img/placeholder-all.png' %}" data-src="{% static 'assets/img/prod-1.png' %}" alt="product"></a>
 									<div class="product-item-cover">
 										<div class="price-cover">
 											<div class="new-price">$1.699</div>
 											<div class="old-price">$1.799</div>
 										</div>
-										<h6 class="prod-title"><a href="shop/single-shop.html">Granite Peak 24" <br>Girls Mountain Bike</a></h6>
-										<a href="shop/single-shop.html" class="btn"><span>buy now</span></a>
+										<h6 class="prod-title"><a href="{% url 'shop:single' %}">Granite Peak 24" <br>Girls Mountain Bike</a></h6>
+										<a href="{% url 'shop:single' %}" class="btn"><span>buy now</span></a>
 									</div>
 									<div class="prod-info">
 										<ul class="prod-list">
@@ -964,13 +990,13 @@
 										<li><a href="#"><i class="fa fa-refresh" aria-hidden="true"></i></a></li>
 										<li><a href="#"><i class="fa fa-heart" aria-hidden="true"></i></a></li>
 									</ul>
-									<a href="shop/single-shop.html" class="product-img"><img class="lazy" src="{% static 'assets/img/placeholder-all.png' %}" data-src="{% static 'assets/img/prod-2.png' %}" alt="product"></a>
+									<a href="{% url 'shop:single' %}" class="product-img"><img class="lazy" src="{% static 'assets/img/placeholder-all.png' %}" data-src="{% static 'assets/img/prod-2.png' %}" alt="product"></a>
 									<div class="product-item-cover">
 										<div class="price-cover">
 											<div class="new-price">$1.699</div>
 										</div>
-										<h6 class="prod-title"><a href="shop/single-shop.html">Hyper E-Ride Bike 700C <br>20+ Mile Range</a></h6>
-										<a href="shop/single-shop.html" class="btn"><span>buy now</span></a>
+										<h6 class="prod-title"><a href="{% url 'shop:single' %}">Hyper E-Ride Bike 700C <br>20+ Mile Range</a></h6>
+										<a href="{% url 'shop:single' %}" class="btn"><span>buy now</span></a>
 									</div>
 									<div class="prod-info">
 										<ul class="prod-list">
@@ -990,14 +1016,14 @@
 										<li><a href="#"><i class="fa fa-refresh" aria-hidden="true"></i></a></li>
 										<li><a href="#"><i class="fa fa-heart" aria-hidden="true"></i></a></li>
 									</ul>
-									<a href="shop/single-shop.html" class="product-img"><img class="lazy" src="{% static 'assets/img/placeholder-all.png' %}" data-src="{% static 'assets/img/prod-3.png' %}" alt="product"></a>
+									<a href="{% url 'shop:single' %}" class="product-img"><img class="lazy" src="{% static 'assets/img/placeholder-all.png' %}" data-src="{% static 'assets/img/prod-3.png' %}" alt="product"></a>
 									<div class="product-item-cover">
 										<div class="price-cover">
 											<div class="new-price">$1.699</div>
 											<div class="old-price">$1.799</div>
 										</div>
-										<h6 class="prod-title"><a href="shop/single-shop.html">Lightweight M370-27speed <br>Aluminum Alloy Mantis</a></h6>
-										<a href="shop/single-shop.html" class="btn"><span>buy now</span></a>
+										<h6 class="prod-title"><a href="{% url 'shop:single' %}">Lightweight M370-27speed <br>Aluminum Alloy Mantis</a></h6>
+										<a href="{% url 'shop:single' %}" class="btn"><span>buy now</span></a>
 									</div>
 									<div class="prod-info">
 										<ul class="prod-list">
@@ -1016,13 +1042,13 @@
 										<li><a href="#"><i class="fa fa-refresh" aria-hidden="true"></i></a></li>
 										<li><a href="#"><i class="fa fa-heart" aria-hidden="true"></i></a></li>
 									</ul>
-									<a href="shop/single-shop.html" class="product-img"><img class="lazy" src="{% static 'assets/img/placeholder-all.png' %}" data-src="{% static 'assets/img/prod-4.png' %}" alt="product"></a>
+									<a href="{% url 'shop:single' %}" class="product-img"><img class="lazy" src="{% static 'assets/img/placeholder-all.png' %}" data-src="{% static 'assets/img/prod-4.png' %}" alt="product"></a>
 									<div class="product-item-cover">
 										<div class="price-cover">
 											<div class="new-price">$1.699</div>
 										</div>
-										<h6 class="prod-title"><a href="shop/single-shop.html">New Spring Beach Cruiser <br>Bicycle Chrome</a></h6>
-										<a href="shop/single-shop.html" class="btn"><span>buy now</span></a>
+										<h6 class="prod-title"><a href="{% url 'shop:single' %}">New Spring Beach Cruiser <br>Bicycle Chrome</a></h6>
+										<a href="{% url 'shop:single' %}" class="btn"><span>buy now</span></a>
 									</div>
 									<div class="prod-info">
 										<ul class="prod-list">
@@ -1041,13 +1067,13 @@
 										<li><a href="#"><i class="fa fa-refresh" aria-hidden="true"></i></a></li>
 										<li><a href="#"><i class="fa fa-heart" aria-hidden="true"></i></a></li>
 									</ul>
-									<a href="shop/single-shop.html" class="product-img"><img class="lazy" src="{% static 'assets/img/placeholder-all.png' %}" data-src="{% static 'assets/img/prod-7.png' %}" alt="product"></a>
+									<a href="{% url 'shop:single' %}" class="product-img"><img class="lazy" src="{% static 'assets/img/placeholder-all.png' %}" data-src="{% static 'assets/img/prod-7.png' %}" alt="product"></a>
 									<div class="product-item-cover">
 										<div class="price-cover">
 											<div class="new-price">$1.699</div>
 										</div>
-										<h6 class="prod-title"><a href="shop/single-shop.html">Steel Frame MTB Bike <br>with 21 Speed</a></h6>
-										<a href="shop/single-shop.html" class="btn"><span>buy now</span></a>
+										<h6 class="prod-title"><a href="{% url 'shop:single' %}">Steel Frame MTB Bike <br>with 21 Speed</a></h6>
+										<a href="{% url 'shop:single' %}" class="btn"><span>buy now</span></a>
 									</div>
 									<div class="prod-info">
 										<ul class="prod-list">
@@ -1066,13 +1092,13 @@
 										<li><a href="#"><i class="fa fa-refresh" aria-hidden="true"></i></a></li>
 										<li><a href="#"><i class="fa fa-heart" aria-hidden="true"></i></a></li>
 									</ul>
-									<a href="shop/single-shop.html" class="product-img"><img class="lazy" src="{% static 'assets/img/placeholder-all.png' %}" data-src="{% static 'assets/img/prod-8.png' %}" alt="product"></a>
+									<a href="{% url 'shop:single' %}" class="product-img"><img class="lazy" src="{% static 'assets/img/placeholder-all.png' %}" data-src="{% static 'assets/img/prod-8.png' %}" alt="product"></a>
 									<div class="product-item-cover">
 										<div class="price-cover">
 											<div class="new-price">$1.699</div>
 										</div>
-										<h6 class="prod-title"><a href="shop/single-shop.html">Leopard Rider No Chain <br>Mountain Bicycle</a></h6>
-										<a href="shop/single-shop.html" class="btn"><span>buy now</span></a>
+										<h6 class="prod-title"><a href="{% url 'shop:single' %}">Leopard Rider No Chain <br>Mountain Bicycle</a></h6>
+										<a href="{% url 'shop:single' %}" class="btn"><span>buy now</span></a>
 									</div>
 									<div class="prod-info">
 										<ul class="prod-list">
@@ -1101,7 +1127,8 @@
 			<div class="subscribe-left">
 				<h2 class="title"><span>Subscribe</span></h2>
 				<p>Subscribe us and you won't miss the new arrivals, as well as discounts and sales.</p>
-				<form class="subscribe-form">
+				<form class="subscribe-form" action="" method="POST">
+                    {% csrf_token %}
 					<i class="fa fa-at" aria-hidden="true"></i>
 					<input class="inp-form" type="email" name="subscribe" placeholder="E-mail">
 					<button type="submit" class="btn btn-form btn-yellow"><span>send</span></button>
@@ -1123,14 +1150,14 @@
 							<li><a href="#"><i class="fa fa-refresh" aria-hidden="true"></i></a></li>
 							<li><a href="#"><i class="fa fa-heart" aria-hidden="true"></i></a></li>
 						</ul>
-						<a href="shop/single-shop.html" class="product-img"><img class="lazy" src="{% static 'assets/img/placeholder-all.png' %}" data-src="{% static 'assets/img/prod-9.png' %}" alt="product"></a>
+						<a href="{% url 'shop:single' %}" class="product-img"><img class="lazy" src="{% static 'assets/img/placeholder-all.png' %}" data-src="{% static 'assets/img/prod-9.png' %}" alt="product"></a>
 						<div class="product-item-cover">
 							<div class="price-cover">
 								<div class="new-price">$1.699</div>
 								<div class="old-price">$1.799</div>
 							</div>
-							<h6 class="prod-title"><a href="shop/single-shop.html">Granite Peak 24" <br>Girls Mountain Bike</a></h6>
-							<a href="shop/single-shop.html" class="btn"><span>buy now</span></a>
+							<h6 class="prod-title"><a href="{% url 'shop:single' %}">Granite Peak 24" <br>Girls Mountain Bike</a></h6>
+							<a href="{% url 'shop:single' %}" class="btn"><span>buy now</span></a>
 						</div>
 						<div class="prod-info">
 							<ul class="prod-list">
@@ -1149,14 +1176,14 @@
 							<li><a href="#"><i class="fa fa-refresh" aria-hidden="true"></i></a></li>
 							<li><a href="#"><i class="fa fa-heart" aria-hidden="true"></i></a></li>
 						</ul>
-						<a href="shop/single-shop.html" class="product-img"><img class="lazy" src="{% static 'assets/img/placeholder-all.png' %}" data-src="{% static 'assets/img/prod-10.png' %}" alt="product"></a>
+						<a href="{% url 'shop:single' %}" class="product-img"><img class="lazy" src="{% static 'assets/img/placeholder-all.png' %}" data-src="{% static 'assets/img/prod-10.png' %}" alt="product"></a>
 						<div class="product-item-cover">
 							<div class="price-cover">
 								<div class="new-price">$1.499</div>
 								<div class="old-price">$1.799</div>
 							</div>
-							<h6 class="prod-title"><a href="shop/single-shop.html">Granite Peak 24" <br>Girls Mountain Bike</a></h6>
-							<a href="shop/single-shop.html" class="btn"><span>buy now</span></a>
+							<h6 class="prod-title"><a href="{% url 'shop:single' %}">Granite Peak 24" <br>Girls Mountain Bike</a></h6>
+							<a href="{% url 'shop:single' %}" class="btn"><span>buy now</span></a>
 						</div>
 						<div class="prod-info">
 							<ul class="prod-list">
@@ -1175,14 +1202,14 @@
 							<li><a href="#"><i class="fa fa-refresh" aria-hidden="true"></i></a></li>
 							<li><a href="#"><i class="fa fa-heart" aria-hidden="true"></i></a></li>
 						</ul>
-						<a href="shop/single-shop.html" class="product-img"><img class="lazy" src="{% static 'assets/img/placeholder-all.png' %}" data-src="{% static 'assets/img/prod-11.png' %}" alt="product"></a>
+						<a href="{% url 'shop:single' %}" class="product-img"><img class="lazy" src="{% static 'assets/img/placeholder-all.png' %}" data-src="{% static 'assets/img/prod-11.png' %}" alt="product"></a>
 						<div class="product-item-cover">
 							<div class="price-cover">
 								<div class="new-price">$1.699</div>
 								<div class="old-price">$1.799</div>
 							</div>
-							<h6 class="prod-title"><a href="shop/single-shop.html">Granite Peak 24" <br>Girls Mountain Bike</a></h6>
-							<a href="shop/single-shop.html" class="btn"><span>buy now</span></a>
+							<h6 class="prod-title"><a href="{% url 'shop:single' %}">Granite Peak 24" <br>Girls Mountain Bike</a></h6>
+							<a href="{% url 'shop:single' %}" class="btn"><span>buy now</span></a>
 						</div>
 						<div class="prod-info">
 							<ul class="prod-list">
@@ -1201,14 +1228,14 @@
 							<li><a href="#"><i class="fa fa-refresh" aria-hidden="true"></i></a></li>
 							<li><a href="#"><i class="fa fa-heart" aria-hidden="true"></i></a></li>
 						</ul>
-						<a href="shop/single-shop.html" class="product-img"><img class="lazy" src="{% static 'assets/img/placeholder-all.png' %}" data-src="{% static 'assets/img/prod-12.png' %}" alt="product"></a>
+						<a href="{% url 'shop:single' %}" class="product-img"><img class="lazy" src="{% static 'assets/img/placeholder-all.png' %}" data-src="{% static 'assets/img/prod-12.png' %}" alt="product"></a>
 						<div class="product-item-cover">
 							<div class="price-cover">
 								<div class="new-price">$1.499</div>
 								<div class="old-price">$1.799</div>
 							</div>
-							<h6 class="prod-title"><a href="shop/single-shop.html">Granite Peak 24" <br>Girls Mountain Bike</a></h6>
-							<a href="shop/single-shop.html" class="btn"><span>buy now</span></a>
+							<h6 class="prod-title"><a href="{% url 'shop:single' %}">Granite Peak 24" <br>Girls Mountain Bike</a></h6>
+							<a href="{% url 'shop:single' %}" class="btn"><span>buy now</span></a>
 						</div>
 						<div class="prod-info">
 							<ul class="prod-list">
@@ -1317,65 +1344,6 @@
 		</div>
 	</section>
 	<!--================ S-FEEDBACK END ================-->
-
-	<!--================== S-OUR-NEWS ==================-->
-	<section class="s-our-news">
-		<div class="container">
-			<h2 class="title">Our News</h2>
-			<div class="news-cover row">
-				<div class="col-12 col-md-6 col-lg-4">
-					<div class="news-item">
-						<h6 class="title"><a href="news.html">doloremque laudantium, totam rem aperiam, eaque ipsa quae</a></h6>
-						<div class="news-post-thumbnail">
-							<a href="news.html"><img class="lazy" src="{% static 'assets/img/placeholder-all.png' %}" data-src="{% static 'assets/img/news-1.jpg' %}" alt="news"></a>
-						</div>
-						<div class="meta">
-							<span class="date"><i class="fa fa-calendar" aria-hidden="true"></i> Dec 26,2019</span>
-							<span class="post-by"><i class="fa fa-user" aria-hidden="true"></i> By <a href="#">Samson</a></span>
-						</div>
-						<div class="post-content">
-							<p>Sed ut perspiciatis unde omnis iste natus  sit voluptatem accusantium doloremque lauda ntium, totam rem aperiam, eaque.</p>
-						</div>
-						<a href="news.html" class="btn-news">read more</a>
-					</div>
-				</div>
-				<div class="col-12 col-md-6 col-lg-4">
-					<div class="news-item">
-						<h6 class="title"><a href="news.html">At vero eos et accusamus et iusto odio dignissimos ducim</a></h6>
-						<div class="news-post-thumbnail">
-							<a href="single-news.html"><img class="lazy" src="{% static 'assets/img/placeholder-all.png' %}" data-src="{% static 'assets/img/news-2.jpg' %}" alt="news"></a>
-						</div>
-						<div class="meta">
-							<span class="date"><i class="fa fa-calendar" aria-hidden="true"></i> Dec 26,2019</span>
-							<span class="post-by"><i class="fa fa-user" aria-hidden="true"></i> By <a href="#">Samson</a></span>
-						</div>
-						<div class="post-content">
-							<p>Corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui.</p>
-						</div>
-						<a href="single-news.html" class="btn-news">read more</a>
-					</div>
-				</div>
-				<div class="col-12 col-md-6 col-lg-4">
-					<div class="news-item">
-						<h6 class="title"><a href="news.html">On the other hand, we denounce with righteous indignation a</a></h6>
-						<div class="news-post-thumbnail">
-							<a href="news.html"><img class="lazy" src="{% static 'assets/img/placeholder-all.png' %}" data-src="{% static 'assets/img/news-3.jpg' %}" alt="news"></a>
-						</div>
-						<div class="meta">
-							<span class="date"><i class="fa fa-calendar" aria-hidden="true"></i> Dec 26,2019</span>
-							<span class="post-by"><i class="fa fa-user" aria-hidden="true"></i> By <a href="#">Samson</a></span>
-						</div>
-						<div class="post-content">
-							<p>Blinded by desire, that they cannot foresee the pain and trouble that are bound to ensue; and equal blame belongs to those.</p>
-						</div>
-						<a href="single-news.html" class="btn-news">read more</a>
-					</div>
-				</div>
-			</div>
-			<div class="btn-cover"><a class="btn" href="news.html"><span>view more</span></a></div>
-		</div>
-	</section>
-	<!--================ S-OUR-NEWS END ================-->
 
 	<!--=================== S-CLIENTS ===================-->
 	<section class="s-clients">
