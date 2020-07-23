@@ -17,10 +17,10 @@
 					<div class="main-slide-info">
 						<h2 class="title">Meilleurs vélos pour vous</h2>
 						<p>Le meilleur choix vous appartient</p>
-						<a href="{% url 'shop:single' article.id %}" class="btn"><span>Acheter Maintenant</span></a>
+						<a href="" class="btn"><span>Acheter Maintenant</span></a>
 					</div>
 					<div class="slide-img-cover">
-						<a href="#" class="lable-bike">
+						<a href="{% url 'shop:single' article.id %}" class="lable-bike">
 							<div class="lable-bike-img"><img src="{{ article.image0.url }}" alt="img"></div>
 							<div class="lable-bike-item">
 								<div class="model">{{ article.categorie }}</div>
@@ -187,160 +187,6 @@
 									</div>
 								</div>
 							{% endfor %}
-							
-							<div class="col-sm-6 col-lg-3">
-								<div class="product-item">
-									<span class="sale">11%</span>
-									<ul class="product-icon-top">
-										<li><a href="#"><i class="fa fa-refresh" aria-hidden="true"></i></a></li>
-										<li><a href="#"><i class="fa fa-heart" aria-hidden="true"></i></a></li>
-									</ul>
-									<a href="{% url 'shop:single' %}" class="product-img"><img class="lazy" src="{% static 'assets/img/placeholder-all.png' %}" data-src="{% static 'assets/img/prod-3.png' %}" alt="product"></a>
-									<div class="product-item-cover">
-										<div class="price-cover">
-											<div class="new-price">$1.699</div>
-											<div class="old-price">$1.799</div>
-										</div>
-										<h6 class="prod-title"><a href="{% url 'shop:single' %}">Lightweight M370-27speed <br>Aluminum Alloy Mantis</a></h6>
-										<a href="{% url 'shop:single' %}" class="btn"><span>buy now</span></a>
-									</div>
-									<div class="prod-info">
-										<ul class="prod-list">
-											<li>Frame Size: <span>17</span></li>
-											<li>Class: <span>City</span></li>
-											<li>Number of speeds: <span>7</span></li>
-											<li>Type: <span>Rigid</span></li>
-											<li>Country registration: <span>USA</span></li>
-										</ul>
-									</div>
-								</div>
-							</div>
-							<div class="col-sm-6 col-lg-3">
-								<div class="product-item">
-									<ul class="product-icon-top">
-										<li><a href="#"><i class="fa fa-refresh" aria-hidden="true"></i></a></li>
-										<li><a href="#"><i class="fa fa-heart" aria-hidden="true"></i></a></li>
-									</ul>
-									<a href="{% url 'shop:single' %}" class="product-img"><img class="lazy" src="{% static 'assets/img/placeholder-all.png' %}" data-src="{% static 'assets/img/prod-4.png' %}" alt="product"></a>
-									<div class="product-item-cover">
-										<div class="price-cover">
-											<div class="new-price">$1.699</div>
-										</div>
-										<h6 class="prod-title"><a href="{% url 'shop:single' %}">New Spring Beach Cruiser <br>Bicycle Chrome</a></h6>
-										<a href="{% url 'shop:single' %}" class="btn"><span>buy now</span></a>
-									</div>
-									<div class="prod-info">
-										<ul class="prod-list">
-											<li>Frame Size: <span>17</span></li>
-											<li>Class: <span>City</span></li>
-											<li>Number of speeds: <span>7</span></li>
-											<li>Type: <span>Rigid</span></li>
-											<li>Country registration: <span>USA</span></li>
-										</ul>
-									</div>
-								</div>
-							</div>
-							<div class="col-sm-6 col-lg-3">
-								<div class="product-item">
-									<ul class="product-icon-top">
-										<li><a href="#"><i class="fa fa-refresh" aria-hidden="true"></i></a></li>
-										<li><a href="#"><i class="fa fa-heart" aria-hidden="true"></i></a></li>
-									</ul>
-									<a href="{% url 'shop:single' %}" class="product-img"><img class="lazy" src="{% static 'assets/img/placeholder-all.png' %}" data-src="{% static 'assets/img/prod-5.png' %}" alt="product"></a>
-									<div class="product-item-cover">
-										<div class="price-cover">
-											<div class="new-price">$1.699</div>
-										</div>
-										<h6 class="prod-title"><a href="{% url 'shop:single' %}">Granite Peak 24" <br>Girls Mountain Bike</a></h6>
-										<a href="{% url 'shop:single' %}" class="btn"><span>buy now</span></a>
-									</div>
-									<div class="prod-info">
-										<ul class="prod-list">
-											<li>Frame Size: <span>17</span></li>
-											<li>Class: <span>City</span></li>
-											<li>Number of speeds: <span>7</span></li>
-											<li>Type: <span>Rigid</span></li>
-											<li>Country registration: <span>USA</span></li>
-										</ul>
-									</div>
-								</div>
-							</div>
-							<div class="col-sm-6 col-lg-3">
-								<div class="product-item">
-									<ul class="product-icon-top">
-										<li><a href="#"><i class="fa fa-refresh" aria-hidden="true"></i></a></li>
-										<li><a href="#"><i class="fa fa-heart" aria-hidden="true"></i></a></li>
-									</ul>
-									<a href="{% url 'shop:single' %}" class="product-img"><img class="lazy" src="{% static 'assets/img/placeholder-all.png' %}" data-src="{% static 'assets/img/prod-6.png' %}" alt="product"></a>
-									<div class="product-item-cover">
-										<div class="price-cover">
-											<div class="new-price">$1.699</div>
-										</div>
-										<h6 class="prod-title"><a href="{% url 'shop:single' %}">Aluminum and Fork <br>Mountain Sr-26omg</a></h6>
-										<a href="{% url 'shop:single' %}" class="btn"><span>buy now</span></a>
-									</div>
-									<div class="prod-info">
-										<ul class="prod-list">
-											<li>Frame Size: <span>17</span></li>
-											<li>Class: <span>City</span></li>
-											<li>Number of speeds: <span>7</span></li>
-											<li>Type: <span>Rigid</span></li>
-											<li>Country registration: <span>USA</span></li>
-										</ul>
-									</div>
-								</div>
-							</div>
-							<div class="col-sm-6 col-lg-3">
-								<div class="product-item">
-									<ul class="product-icon-top">
-										<li><a href="#"><i class="fa fa-refresh" aria-hidden="true"></i></a></li>
-										<li><a href="#"><i class="fa fa-heart" aria-hidden="true"></i></a></li>
-									</ul>
-									<a href="{% url 'shop:single' %}" class="product-img"><img class="lazy" src="{% static 'assets/img/placeholder-all.png' %}" data-src="{% static 'assets/img/prod-7.png' %}" alt="product"></a>
-									<div class="product-item-cover">
-										<div class="price-cover">
-											<div class="new-price">$1.699</div>
-										</div>
-										<h6 class="prod-title"><a href="{% url 'shop:single' %}">Steel Frame MTB Bike <br>with 21 Speed</a></h6>
-										<a href="{% url 'shop:single' %}" class="btn"><span>buy now</span></a>
-									</div>
-									<div class="prod-info">
-										<ul class="prod-list">
-											<li>Frame Size: <span>17</span></li>
-											<li>Class: <span>City</span></li>
-											<li>Number of speeds: <span>7</span></li>
-											<li>Type: <span>Rigid</span></li>
-											<li>Country registration: <span>USA</span></li>
-										</ul>
-									</div>
-								</div>
-							</div>
-							<div class="col-sm-6 col-lg-3">
-								<div class="product-item">
-									<ul class="product-icon-top">
-										<li><a href="#"><i class="fa fa-refresh" aria-hidden="true"></i></a></li>
-										<li><a href="#"><i class="fa fa-heart" aria-hidden="true"></i></a></li>
-									</ul>
-									<a href="#" class="product-img"><img class="lazy" src="{{ article.image0.url }}" data-src="{{ article.image0.url }}" alt="product"></a>
-									<div class="product-item-cover">
-										<div class="price-cover">
-											<div class="new-price">${{ article.prix }}</div>
-										</div>
-										<h6 class="prod-title"><a href="#">{{ article.titre }} <br>{{ article.categorie }}</a></h6>
-										<a href="{% url 'shop:single' article.id %}" class="btn"><span>buy now</span></a>
-									</div>
-									<div class="prod-info">
-										<ul class="prod-list">
-											<li>Frame Size: <span>17</span></li>
-											<li>Class: <span>City</span></li>
-											<li>Number of speeds: <span>7</span></li>
-											<li>Type: <span>Rigid</span></li>
-											<li>Country registration: <span>USA</span></li>
-										</ul>
-									</div>
-								</div>
-							</div>
-                           
 						</div>
 					</div>
 

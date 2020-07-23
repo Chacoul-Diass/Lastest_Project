@@ -31,8 +31,8 @@ def shop(request):
 
     
 
-def single(request):
-    return render(request, 'pages/shop/single-shop')
+def single(request, id):
+    return render(request, 'pages/shop/single-shop.html')
 
 @login_required(login_url='/login') 
 def add_to_cart(request, id):
