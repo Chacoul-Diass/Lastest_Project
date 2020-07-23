@@ -10,106 +10,28 @@
 			<li><a href="https://www.instagram.com/rovadex/">instagram</a></li>
 		</ul>
 		<div class="main-slider">
-			<div class="main-slide">
+            {% for article in produit %}
+                <div class="main-slide">
 				<div class="main-slide-bg" style="background-image: url({% static 'assets/img/bg-slider.svg' %});"></div>
 				<div class="container">
 					<div class="main-slide-info">
-						<h2 class="title">best bikes for you</h2>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
-						<a href="#" class="btn"><span>buy now</span></a>
+						<h2 class="title">Meilleurs vélos pour vous</h2>
+						<p>Le meilleur choix vous appartient</p>
+						<a href="{% url 'shop:single' article.id %}" class="btn"><span>Acheter Maintenant</span></a>
 					</div>
 					<div class="slide-img-cover">
 						<a href="#" class="lable-bike">
-							<div class="lable-bike-img"><img src="{% static 'assets/img/bike-info-slide.jpg' %}" alt="img"></div>
+							<div class="lable-bike-img"><img src="{{ article.image0.url }}" alt="img"></div>
 							<div class="lable-bike-item">
-								<div class="model">model SX-200</div>
-								<div class="price">$1399</div>
+								<div class="model">{{ article.categorie }}</div>
+								<div class="price">${{ article.prix }}</div>
 							</div>
 						</a>
 						<img src="{% static 'assets/img/img-slider.png' %}" alt="img" class="slide-img">
 					</div>
 				</div>
 			</div>
-			<div class="main-slide">
-				<div class="main-slide-bg" style="background-image: url({% static 'assets/img/bg-slider-2.svg' %});"></div>
-				<div class="container">
-					<div class="main-slide-info">
-						<h2 class="title">best bikes for you</h2>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore consectetur sint iure id expedita saepe.</p>
-						<a href="#" class="btn"><span>buy now</span></a>
-					</div>
-					<div class="slide-img-cover">
-						<a href="#" class="lable-bike">
-							<div class="lable-bike-img"><img src="{% static 'assets/img/bike-info-slide.jpg' %}" alt="img"></div>
-							<div class="lable-bike-item">
-								<div class="model">model M-300</div>
-								<div class="price">$1199</div>
-							</div>
-						</a>
-						<img src="{% static 'assets/img/img-slider-2.png' %}" alt="img" class="slide-img">
-					</div>
-				</div>
-			</div>
-			<div class="main-slide">
-				<div class="main-slide-bg" style="background-image: url({% static 'assets/img/bg-slider-3.svg' %});"></div>
-				<div class="container">
-					<div class="main-slide-info">
-						<h2 class="title">best bikes for you</h2>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis distinctio tenetur ab ut! Qui, facilis.</p>
-						<a href="#" class="btn"><span>buy now</span></a>
-					</div>
-					<div class="slide-img-cover">
-						<a href="#" class="lable-bike">
-							<div class="lable-bike-img"><img src="{% static 'assets/img/bike-info-slide.jpg' %}" alt="img"></div>
-							<div class="lable-bike-item">
-								<div class="model">model X-230</div>
-								<div class="price">$1099</div>
-							</div>
-						</a>
-						<img src="{% static 'assets/img/img-slider-3.png' %}" alt="img" class="slide-img">
-					</div>
-				</div>
-			</div>
-			<div class="main-slide">
-				<div class="main-slide-bg" style="background-image: url({% static 'assets/img/bg-slider.svg' %});"></div>
-				<div class="container">
-					<div class="main-slide-info">
-						<h2 class="title">best bikes for you</h2>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
-						<a href="#" class="btn"><span>buy now</span></a>
-					</div>
-					<div class="slide-img-cover">
-						<a href="#" class="lable-bike">
-							<div class="lable-bike-img"><img src="{% static 'assets/img/bike-info-slide.jpg' %}" alt="img"></div>
-							<div class="lable-bike-item">
-								<div class="model">model SX-200</div>
-								<div class="price">$1399</div>
-							</div>
-						</a>
-						<img src="{% static 'assets/img/img-slider.png' %}" alt="img" class="slide-img">
-					</div>
-				</div>
-			</div>
-			<div class="main-slide">
-				<div class="main-slide-bg" style="background-image: url({% static 'assets/img/bg-slider-2.svg' %});"></div>
-				<div class="container">
-					<div class="main-slide-info">
-						<h2 class="title">best bikes for you</h2>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore consectetur sint iure id expedita saepe.</p>
-						<a href="#" class="btn"><span>buy now</span></a>
-					</div>
-					<div class="slide-img-cover">
-						<a href="#" class="lable-bike">
-							<div class="lable-bike-img"><img src="{% static 'assets/img/bike-info-slide.jpg' %}" alt="img"></div>
-							<div class="lable-bike-item">
-								<div class="model">model M-300</div>
-								<div class="price">$1199</div>
-							</div>
-						</a>
-						<img src="{% static 'assets/img/img-slider-2.png' %}" alt="img" class="slide-img">
-					</div>
-				</div>
-			</div>
+            {% endfor %}
 		</div>
 	</section>
 	<!-- ============= main-slider end ============= -->
@@ -237,881 +159,257 @@
 		<div class="container">
 			<div class="tab-wrap">
 				<div class="products-title-cover">
-					<h2 class="title">our products</h2>
+					<h2 class="title">Nos produits</h2>
 					<ul class="tab-nav product-tabs">
 						<li class="item" rel="tab1"><span>All</span></li>
-						<li class="item" rel="tab2"><span>Road bike</span></li>
-						<li class="item" rel="tab3"><span>City bike</span></li>
-						<li class="item" rel="tab4"><span>BMX bike</span></li>
+                        {% for categorie in categories %}
+                            <li class="item" rel="tab{{ categorie.id }}"><span>{{ categorie }}</span></li>
+                        {% endfor %}
+
 					</ul>
 				</div>
 				<div class="tabs-content">
-					<div class="tab tab1">
+                    <div class="tab tab1">
 						<div class="row product-cover">
+                            {% for article in prod %}
+                                <div class="col-sm-6 col-lg-3">
+								<div class="product-item">
+									<ul class="product-icon-top">
+										<li><a href="#"><i class="fa fa-refresh" aria-hidden="true"></i></a></li>
+										<li><a href="#"><i class="fa fa-heart" aria-hidden="true"></i></a></li>
+									</ul>
+									<a href="#" class="product-img"><img class="lazy" src="{{ article.image0.url }}" data-src="{{ article.image0.url }}" alt="product"></a>
+									<div class="product-item-cover">
+										<div class="price-cover">
+											<div class="new-price">${{ article.prix }}</div>
+										</div>
+										<h6 class="prod-title"><a href="#">{{ article.titre }} <br>{{ article.categorie }}</a></h6>
+										<a href="{% url 'shop:single' article.id %}" class="btn"><span>buy now</span></a>
+									</div>
+									<div class="prod-info">
+										<ul class="prod-list">
+											<li>Frame Size: <span>17</span></li>
+											<li>Class: <span>City</span></li>
+											<li>Number of speeds: <span>7</span></li>
+											<li>Type: <span>Rigid</span></li>
+											<li>Country registration: <span>USA</span></li>
+										</ul>
+									</div>
+								</div>
+							</div>
+                            {% endfor %}
+						</div>
+					</div>
 
-							{% for pr in produit %}
-								<div class="col-sm-6 col-lg-3">
+{#					<div class="tab tab2">#}
+{#						<div class="row product-cover">#}
+{#							<div class="col-sm-6 col-lg-3">#}
+{#								<div class="product-item">#}
+{#									<ul class="product-icon-top">#}
+{#										<li><a href="#"><i class="fa fa-refresh" aria-hidden="true"></i></a></li>#}
+{#										<li><a href="#"><i class="fa fa-heart" aria-hidden="true"></i></a></li>#}
+{#									</ul>#}
+{#									<a href="#" class="product-img"><img class="lazy" src="{% static 'assets/img/placeholder-all.png' %}" data-src="{% static 'assets/img/prod-5.png' %}" alt="product"></a>#}
+{#									<div class="product-item-cover">#}
+{#										<div class="price-cover">#}
+{#											<div class="new-price">$1.699</div>#}
+{#										</div>#}
+{#										<h6 class="prod-title"><a href="#">Granite Peak 24" <br>Girls Mountain Bike</a></h6>#}
+{#										<a href="#" class="btn"><span>buy now</span></a>#}
+{#									</div>#}
+{#									<div class="prod-info">#}
+{#										<ul class="prod-list">#}
+{#											<li>Frame Size: <span>17</span></li>#}
+{#											<li>Class: <span>City</span></li>#}
+{#											<li>Number of speeds: <span>7</span></li>#}
+{#											<li>Type: <span>Rigid</span></li>#}
+{#											<li>Country registration: <span>USA</span></li>#}
+{#										</ul>#}
+{#									</div>#}
+{#								</div>#}
+{#							</div>#}
+{#							<div class="col-sm-6 col-lg-3">#}
+{#								<div class="product-item">#}
+{#									<ul class="product-icon-top">#}
+{#										<li><a href="#"><i class="fa fa-refresh" aria-hidden="true"></i></a></li>#}
+{#										<li><a href="#"><i class="fa fa-heart" aria-hidden="true"></i></a></li>#}
+{#									</ul>#}
+{#									<a href="#" class="product-img"><img class="lazy" src="{% static 'assets/img/placeholder-all.png' %}" data-src="{% static 'assets/img/prod-6.png' %}" alt="product"></a>#}
+{#									<div class="product-item-cover">#}
+{#										<div class="price-cover">#}
+{#											<div class="new-price">$1.699</div>#}
+{#										</div>#}
+{#										<h6 class="prod-title"><a href="#">Aluminum and Fork <br>Mountain Sr-26omg</a></h6>#}
+{#										<a href="#" class="btn"><span>buy now</span></a>#}
+{#									</div>#}
+{#									<div class="prod-info">#}
+{#										<ul class="prod-list">#}
+{#											<li>Frame Size: <span>17</span></li>#}
+{#											<li>Class: <span>City</span></li>#}
+{#											<li>Number of speeds: <span>7</span></li>#}
+{#											<li>Type: <span>Rigid</span></li>#}
+{#											<li>Country registration: <span>USA</span></li>#}
+{#										</ul>#}
+{#									</div>#}
+{#								</div>#}
+{#							</div>#}
+{#							<div class="col-sm-6 col-lg-3">#}
+{#								<div class="product-item">#}
+{#									<span class="top-sale">top sale</span>#}
+{#									<ul class="product-icon-top">#}
+{#										<li><a href="#"><i class="fa fa-refresh" aria-hidden="true"></i></a></li>#}
+{#										<li><a href="#"><i class="fa fa-heart" aria-hidden="true"></i></a></li>#}
+{#									</ul>#}
+{#									<a href="#" class="product-img"><img class="lazy" src="{% static 'assets/img/placeholder-all.png' %}" data-src="{% static 'assets/img/prod-1.png' %}" alt="product"></a>#}
+{#									<div class="product-item-cover">#}
+{#										<div class="price-cover">#}
+{#											<div class="new-price">$1.699</div>#}
+{#											<div class="old-price">$1.799</div>#}
+{#										</div>#}
+{#										<h6 class="prod-title"><a href="#">Granite Peak 24" <br>Girls Mountain Bike</a></h6>#}
+{#										<a href="#" class="btn"><span>buy now</span></a>#}
+{#									</div>#}
+{#									<div class="prod-info">#}
+{#										<ul class="prod-list">#}
+{#											<li>Frame Size: <span>17</span></li>#}
+{#											<li>Class: <span>City</span></li>#}
+{#											<li>Number of speeds: <span>7</span></li>#}
+{#											<li>Type: <span>Rigid</span></li>#}
+{#											<li>Country registration: <span>USA</span></li>#}
+{#										</ul>#}
+{#									</div>#}
+{#								</div>#}
+{#							</div>#}
+{#							<div class="col-sm-6 col-lg-3">#}
+{#								<div class="product-item">#}
+{#									<ul class="product-icon-top">#}
+{#										<li><a href="#"><i class="fa fa-refresh" aria-hidden="true"></i></a></li>#}
+{#										<li><a href="#"><i class="fa fa-heart" aria-hidden="true"></i></a></li>#}
+{#									</ul>#}
+{#									<a href="#" class="product-img"><img class="lazy" src="{% static 'assets/img/placeholder-all.png' %}" data-src="{% static 'assets/img/prod-2.png' %}" alt="product"></a>#}
+{#									<div class="product-item-cover">#}
+{#										<div class="price-cover">#}
+{#											<div class="new-price">$1.699</div>#}
+{#										</div>#}
+{#										<h6 class="prod-title"><a href="#">Hyper E-Ride Bike 700C <br>20+ Mile Range</a></h6>#}
+{#										<a href="#" class="btn"><span>buy now</span></a>#}
+{#									</div>#}
+{#									<div class="prod-info">#}
+{#										<ul class="prod-list">#}
+{#											<li>Frame Size: <span>17</span></li>#}
+{#											<li>Class: <span>City</span></li>#}
+{#											<li>Number of speeds: <span>7</span></li>#}
+{#											<li>Type: <span>Rigid</span></li>#}
+{#											<li>Country registration: <span>USA</span></li>#}
+{#										</ul>#}
+{#									</div>#}
+{#								</div>#}
+{#							</div>#}
+{#							<div class="col-sm-6 col-lg-3">#}
+{#								<div class="product-item">#}
+{#									<span class="sale">11%</span>#}
+{#									<ul class="product-icon-top">#}
+{#										<li><a href="#"><i class="fa fa-refresh" aria-hidden="true"></i></a></li>#}
+{#										<li><a href="#"><i class="fa fa-heart" aria-hidden="true"></i></a></li>#}
+{#									</ul>#}
+{#									<a href="#" class="product-img"><img class="lazy" src="{% static 'assets/img/placeholder-all.png' %}" data-src="{% static 'assets/img/prod-3.png' %}" alt="product"></a>#}
+{#									<div class="product-item-cover">#}
+{#										<div class="price-cover">#}
+{#											<div class="new-price">$1.699</div>#}
+{#											<div class="old-price">$1.799</div>#}
+{#										</div>#}
+{#										<h6 class="prod-title"><a href="#">Lightweight M370-27speed <br>Aluminum Alloy Mantis</a></h6>#}
+{#										<a href="#" class="btn"><span>buy now</span></a>#}
+{#									</div>#}
+{#									<div class="prod-info">#}
+{#										<ul class="prod-list">#}
+{#											<li>Frame Size: <span>17</span></li>#}
+{#											<li>Class: <span>City</span></li>#}
+{#											<li>Number of speeds: <span>7</span></li>#}
+{#											<li>Type: <span>Rigid</span></li>#}
+{#											<li>Country registration: <span>USA</span></li>#}
+{#										</ul>#}
+{#									</div>#}
+{#								</div>#}
+{#							</div>F#}
+{#							<div class="col-sm-6 col-lg-3">#}
+{#								<div class="product-item">#}
+{#									<ul class="product-icon-top">#}
+{#										<li><a href="#"><i class="fa fa-refresh" aria-hidden="true"></i></a></li>#}
+{#										<li><a href="#"><i class="fa fa-heart" aria-hidden="true"></i></a></li>#}
+{#									</ul>#}
+{#									<a href="#" class="product-img"><img class="lazy" src="{% static 'assets/img/placeholder-all.png' %}" data-src="{% static 'assets/img/prod-4.png' %}" alt="product"></a>#}
+{#									<div class="product-item-cover">#}
+{#										<div class="price-cover">#}
+{#											<div class="new-price">$1.699</div>#}
+{#										</div>#}
+{#										<h6 class="prod-title"><a href="#">New Spring Beach Cruiser <br>Bicycle Chrome</a></h6>#}
+{#										<a href="#" class="btn"><span>buy now</span></a>#}
+{#									</div>#}
+{#									<div class="prod-info">#}
+{#										<ul class="prod-list">#}
+{#											<li>Frame Size: <span>17</span></li>#}
+{#											<li>Class: <span>City</span></li>#}
+{#											<li>Number of speeds: <span>7</span></li>#}
+{#											<li>Type: <span>Rigid</span></li>#}
+{#											<li>Country registration: <span>USA</span></li>#}
+{#										</ul>#}
+{#									</div>#}
+{#								</div>#}
+{#							</div>#}
+{#							<div class="col-sm-6 col-lg-3">#}
+{#								<div class="product-item">#}
+{#									<ul class="product-icon-top">#}
+{#										<li><a href="#"><i class="fa fa-refresh" aria-hidden="true"></i></a></li>#}
+{#										<li><a href="#"><i class="fa fa-heart" aria-hidden="true"></i></a></li>#}
+{#									</ul>#}
+{#									<a href="#" class="product-img"><img class="lazy" src="{% static 'assets/img/placeholder-all.png' %}" data-src="{% static 'assets/img/prod-7.png' %}" alt="product"></a>#}
+{#									<div class="product-item-cover">#}
+{#										<div class="price-cover">#}
+{#											<div class="new-price">$1.699</div>#}
+{#										</div>#}
+{#										<h6 class="prod-title"><a href="#">Steel Frame MTB Bike <br>with 21 Speed</a></h6>#}
+{#										<a href="#" class="btn"><span>buy now</span></a>#}
+{#									</div>#}
+{#									<div class="prod-info">#}
+{#										<ul class="prod-list">#}
+{#											<li>Frame Size: <span>17</span></li>#}
+{#											<li>Class: <span>City</span></li>#}
+{#											<li>Number of speeds: <span>7</span></li>#}
+{#											<li>Type: <span>Rigid</span></li>#}
+{#											<li>Country registration: <span>USA</span></li>#}
+{#										</ul>#}
+{#									</div>#}
+{#								</div>#}
+{#							</div>#}
+{#							<div class="col-sm-6 col-lg-3">#}
+{#								<div class="product-item">#}
+{#									<ul class="product-icon-top">#}
+{#										<li><a href="#"><i class="fa fa-refresh" aria-hidden="true"></i></a></li>#}
+{#										<li><a href="#"><i class="fa fa-heart" aria-hidden="true"></i></a></li>#}
+{#									</ul>#}
+{#									<a href="#" class="product-img"><img class="lazy" src="{% static 'assets/img/placeholder-all.png' %}" data-src="{% static 'assets/img/prod-8.png' %}" alt="product"></a>#}
+{#									<div class="product-item-cover">#}
+{#										<div class="price-cover">#}
+{#											<div class="new-price">$1.699</div>#}
+{#										</div>#}
+{#										<h6 class="prod-title"><a href="#">Leopard Rider No Chain <br>Mountain Bicycle</a></h6>#}
+{#										<a href="#" class="btn"><span>buy now</span></a>#}
+{#									</div>#}
+{#									<div class="prod-info">#}
+{#										<ul class="prod-list">#}
+{#											<li>Frame Size: <span>17</span></li>#}
+{#											<li>Class: <span>City</span></li>#}
+{#											<li>Number of speeds: <span>7</span></li>#}
+{#											<li>Type: <span>Rigid</span></li>#}
+{#											<li>Country registration: <span>USA</span></li>#}
+{#										</ul>#}
+{#									</div>#}
+{#								</div>#}
+{#							</div>#}
+{#						</div>#}
+{#					</div>#}
 
-									<div class="product-item">
-										<span class="top-sale">top sale</span>
-										<ul class="product-icon-top">
-											<li><a href="#"><i class="fa fa-refresh" aria-hidden="true"></i></a></li>
-											<li><a href="#"><i class="fa fa-heart" aria-hidden="true"></i></a></li>
-
-							<div class="col-sm-6 col-lg-3">
-								<div class="product-item">
-									<span class="top-sale">top sale</span>
-									<ul class="product-icon-top">
-										<li><a href="#"><i class="fa fa-refresh" aria-hidden="true"></i></a></li>
-										<li><a href="#"><i class="fa fa-heart" aria-hidden="true"></i></a></li>
-									</ul>
-									<a href="#" class="product-img"><img class="lazy" src="{% static 'assets/img/placeholder-all.png' %}" data-src="{% static 'assets/img/prod-1.png' %}" alt="product"></a>
-									<div class="product-item-cover">
-										<div class="price-cover">
-											<div class="new-price">$1.699</div>
-											<div class="old-price">$1.799</div>
-										</div>
-										<h6 class="prod-title"><a href="#">Granite Peak 24" <br>Girls Mountain Bike</a></h6>
-										<a href="#" class="btn"><span>buy now</span></a>
-									</div>
-									<div class="prod-info">
-										<ul class="prod-list">
-											<li>Frame Size: <span>17</span></li>
-											<li>Class: <span>City</span></li>
-											<li>Number of speeds: <span>7</span></li>
-											<li>Type: <span>Rigid</span></li>
-											<li>Country registration: <span>USA</span></li>
-										</ul>
-										<a href="addtocart/{{pr.id}}" class="product-img">
-											{% if pr.image1 %}
-											<img class="lazy" src="{{pr.image1.url }}" data-src="{{pr.image1.url}}" alt="product">
-											{% else %}
-											<img class="lazy" src="{% static 'assets/img/placeholder-all.png' %}" data-src="{% static 'assets/img/prod-1.png' %}" alt="product">
-											{% endif %}
-										</a>
-										<div class="product-item-cover">
-											<div class="price-cover">
-												<div class="new-price">$ {{pr.prix}} </div>
-												<div class="old-price">${{pr.reduction}}</div>
-											</div>
-											<h6 class="prod-title"><a href="shop/single-shop.html">{{pr.titre}} </a></h6>
-											<a href="addtocart/{{pr.id}}" class="btn"><span>buy now</span></a>
-										</div>
-										<div class="prod-info">
-											<ul class="prod-list">
-												<li>Frame Size: <span>17</span></li>
-												<li>Class: <span>City</span></li>
-												<li>Number of speeds: <span>7</span></li>
-												<li>Type: <span>Rigid</span></li>
-												<li>Country registration: <span>USA</span></li>
-											</ul>
-										</div>
-									</div>
-								</div>
-							{% endfor %}
-							<div class="col-sm-6 col-lg-3">
-								<div class="product-item">
-									<ul class="product-icon-top">
-										<li><a href="#"><i class="fa fa-refresh" aria-hidden="true"></i></a></li>
-										<li><a href="#"><i class="fa fa-heart" aria-hidden="true"></i></a></li>
-									</ul>
-									<a href="#" class="product-img"><img class="lazy" src="{% static 'assets/img/placeholder-all.png' %}" data-src="{% static 'assets/img/prod-2.png' %}" alt="product"></a>
-									<div class="product-item-cover">
-										<div class="price-cover">
-											<div class="new-price">$1.699</div>
-										</div>
-										<h6 class="prod-title"><a href="#">Hyper E-Ride Bike 700C <br>20+ Mile Range</a></h6>
-										<a href="#" class="btn"><span>buy now</span></a>
-									</div>
-									<div class="prod-info">
-										<ul class="prod-list">
-											<li>Frame Size: <span>17</span></li>
-											<li>Class: <span>City</span></li>
-											<li>Number of speeds: <span>7</span></li>
-											<li>Type: <span>Rigid</span></li>
-											<li>Country registration: <span>USA</span></li>
-										</ul>
-									</div>
-								</div>
-							</div>
-							<div class="col-sm-6 col-lg-3">
-								<div class="product-item">
-									<span class="sale">11%</span>
-									<ul class="product-icon-top">
-										<li><a href="#"><i class="fa fa-refresh" aria-hidden="true"></i></a></li>
-										<li><a href="#"><i class="fa fa-heart" aria-hidden="true"></i></a></li>
-									</ul>
-									<a href="#" class="product-img"><img class="lazy" src="{% static 'assets/img/placeholder-all.png' %}" data-src="{% static 'assets/img/prod-3.png' %}" alt="product"></a>
-									<div class="product-item-cover">
-										<div class="price-cover">
-											<div class="new-price">$1.699</div>
-											<div class="old-price">$1.799</div>
-										</div>
-										<h6 class="prod-title"><a href="#">Lightweight M370-27speed <br>Aluminum Alloy Mantis</a></h6>
-										<a href="#" class="btn"><span>buy now</span></a>
-									</div>
-									<div class="prod-info">
-										<ul class="prod-list">
-											<li>Frame Size: <span>17</span></li>
-											<li>Class: <span>City</span></li>
-											<li>Number of speeds: <span>7</span></li>
-											<li>Type: <span>Rigid</span></li>
-											<li>Country registration: <span>USA</span></li>
-										</ul>
-									</div>
-								</div>
-							</div>
-							<div class="col-sm-6 col-lg-3">
-								<div class="product-item">
-									<ul class="product-icon-top">
-										<li><a href="#"><i class="fa fa-refresh" aria-hidden="true"></i></a></li>
-										<li><a href="#"><i class="fa fa-heart" aria-hidden="true"></i></a></li>
-									</ul>
-									<a href="#" class="product-img"><img class="lazy" src="{% static 'assets/img/placeholder-all.png' %}" data-src="{% static 'assets/img/prod-4.png' %}" alt="product"></a>
-									<div class="product-item-cover">
-										<div class="price-cover">
-											<div class="new-price">$1.699</div>
-										</div>
-										<h6 class="prod-title"><a href="#">New Spring Beach Cruiser <br>Bicycle Chrome</a></h6>
-										<a href="#" class="btn"><span>buy now</span></a>
-									</div>
-									<div class="prod-info">
-										<ul class="prod-list">
-											<li>Frame Size: <span>17</span></li>
-											<li>Class: <span>City</span></li>
-											<li>Number of speeds: <span>7</span></li>
-											<li>Type: <span>Rigid</span></li>
-											<li>Country registration: <span>USA</span></li>
-										</ul>
-									</div>
-								</div>
-							</div>
-							<div class="col-sm-6 col-lg-3">
-								<div class="product-item">
-									<ul class="product-icon-top">
-										<li><a href="#"><i class="fa fa-refresh" aria-hidden="true"></i></a></li>
-										<li><a href="#"><i class="fa fa-heart" aria-hidden="true"></i></a></li>
-									</ul>
-									<a href="#" class="product-img"><img class="lazy" src="{% static 'assets/img/placeholder-all.png' %}" data-src="{% static 'assets/img/prod-5.png' %}" alt="product"></a>
-									<div class="product-item-cover">
-										<div class="price-cover">
-											<div class="new-price">$1.699</div>
-										</div>
-										<h6 class="prod-title"><a href="#">Granite Peak 24" <br>Girls Mountain Bike</a></h6>
-										<a href="#" class="btn"><span>buy now</span></a>
-									</div>
-									<div class="prod-info">
-										<ul class="prod-list">
-											<li>Frame Size: <span>17</span></li>
-											<li>Class: <span>City</span></li>
-											<li>Number of speeds: <span>7</span></li>
-											<li>Type: <span>Rigid</span></li>
-											<li>Country registration: <span>USA</span></li>
-										</ul>
-									</div>
-								</div>
-							</div>
-							<div class="col-sm-6 col-lg-3">
-								<div class="product-item">
-									<ul class="product-icon-top">
-										<li><a href="#"><i class="fa fa-refresh" aria-hidden="true"></i></a></li>
-										<li><a href="#"><i class="fa fa-heart" aria-hidden="true"></i></a></li>
-									</ul>
-									<a href="#" class="product-img"><img class="lazy" src="{% static 'assets/img/placeholder-all.png' %}" data-src="{% static 'assets/img/prod-6.png' %}" alt="product"></a>
-									<div class="product-item-cover">
-										<div class="price-cover">
-											<div class="new-price">$1.699</div>
-										</div>
-										<h6 class="prod-title"><a href="#">Aluminum and Fork <br>Mountain Sr-26omg</a></h6>
-										<a href="#" class="btn"><span>buy now</span></a>
-									</div>
-									<div class="prod-info">
-										<ul class="prod-list">
-											<li>Frame Size: <span>17</span></li>
-											<li>Class: <span>City</span></li>
-											<li>Number of speeds: <span>7</span></li>
-											<li>Type: <span>Rigid</span></li>
-											<li>Country registration: <span>USA</span></li>
-										</ul>
-									</div>
-								</div>
-							</div>
-							<div class="col-sm-6 col-lg-3">
-								<div class="product-item">
-									<ul class="product-icon-top">
-										<li><a href="#"><i class="fa fa-refresh" aria-hidden="true"></i></a></li>
-										<li><a href="#"><i class="fa fa-heart" aria-hidden="true"></i></a></li>
-									</ul>
-									<a href="#" class="product-img"><img class="lazy" src="{% static 'assets/img/placeholder-all.png' %}" data-src="{% static 'assets/img/prod-7.png' %}" alt="product"></a>
-									<div class="product-item-cover">
-										<div class="price-cover">
-											<div class="new-price">$1.699</div>
-										</div>
-										<h6 class="prod-title"><a href="#">Steel Frame MTB Bike <br>with 21 Speed</a></h6>
-										<a href="#" class="btn"><span>buy now</span></a>
-									</div>
-									<div class="prod-info">
-										<ul class="prod-list">
-											<li>Frame Size: <span>17</span></li>
-											<li>Class: <span>City</span></li>
-											<li>Number of speeds: <span>7</span></li>
-											<li>Type: <span>Rigid</span></li>
-											<li>Country registration: <span>USA</span></li>
-										</ul>
-									</div>
-								</div>
-							</div>
-							<div class="col-sm-6 col-lg-3">
-								<div class="product-item">
-									<ul class="product-icon-top">
-										<li><a href="#"><i class="fa fa-refresh" aria-hidden="true"></i></a></li>
-										<li><a href="#"><i class="fa fa-heart" aria-hidden="true"></i></a></li>
-									</ul>
-									<a href="#" class="product-img"><img class="lazy" src="{% static 'assets/img/placeholder-all.png' %}" data-src="{% static 'assets/img/prod-8.png' %}" alt="product"></a>
-									<div class="product-item-cover">
-										<div class="price-cover">
-											<div class="new-price">$1.699</div>
-										</div>
-										<h6 class="prod-title"><a href="#">Leopard Rider No Chain <br>Mountain Bicycle</a></h6>
-										<a href="#" class="btn"><span>buy now</span></a>
-									</div>
-									<div class="prod-info">
-										<ul class="prod-list">
-											<li>Frame Size: <span>17</span></li>
-											<li>Class: <span>City</span></li>
-											<li>Number of speeds: <span>7</span></li>
-											<li>Type: <span>Rigid</span></li>
-											<li>Country registration: <span>USA</span></li>
-										</ul>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="tab tab2">
-						<div class="row product-cover">
-							<div class="col-sm-6 col-lg-3">
-								<div class="product-item">
-									<ul class="product-icon-top">
-										<li><a href="#"><i class="fa fa-refresh" aria-hidden="true"></i></a></li>
-										<li><a href="#"><i class="fa fa-heart" aria-hidden="true"></i></a></li>
-									</ul>
-									<a href="#" class="product-img"><img class="lazy" src="{% static 'assets/img/placeholder-all.png' %}" data-src="{% static 'assets/img/prod-5.png' %}" alt="product"></a>
-									<div class="product-item-cover">
-										<div class="price-cover">
-											<div class="new-price">$1.699</div>
-										</div>
-										<h6 class="prod-title"><a href="#">Granite Peak 24" <br>Girls Mountain Bike</a></h6>
-										<a href="#" class="btn"><span>buy now</span></a>
-									</div>
-									<div class="prod-info">
-										<ul class="prod-list">
-											<li>Frame Size: <span>17</span></li>
-											<li>Class: <span>City</span></li>
-											<li>Number of speeds: <span>7</span></li>
-											<li>Type: <span>Rigid</span></li>
-											<li>Country registration: <span>USA</span></li>
-										</ul>
-									</div>
-								</div>
-							</div>
-							<div class="col-sm-6 col-lg-3">
-								<div class="product-item">
-									<ul class="product-icon-top">
-										<li><a href="#"><i class="fa fa-refresh" aria-hidden="true"></i></a></li>
-										<li><a href="#"><i class="fa fa-heart" aria-hidden="true"></i></a></li>
-									</ul>
-									<a href="#" class="product-img"><img class="lazy" src="{% static 'assets/img/placeholder-all.png' %}" data-src="{% static 'assets/img/prod-6.png' %}" alt="product"></a>
-									<div class="product-item-cover">
-										<div class="price-cover">
-											<div class="new-price">$1.699</div>
-										</div>
-										<h6 class="prod-title"><a href="#">Aluminum and Fork <br>Mountain Sr-26omg</a></h6>
-										<a href="#" class="btn"><span>buy now</span></a>
-									</div>
-									<div class="prod-info">
-										<ul class="prod-list">
-											<li>Frame Size: <span>17</span></li>
-											<li>Class: <span>City</span></li>
-											<li>Number of speeds: <span>7</span></li>
-											<li>Type: <span>Rigid</span></li>
-											<li>Country registration: <span>USA</span></li>
-										</ul>
-									</div>
-								</div>
-							</div>
-							<div class="col-sm-6 col-lg-3">
-								<div class="product-item">
-									<span class="top-sale">top sale</span>
-									<ul class="product-icon-top">
-										<li><a href="#"><i class="fa fa-refresh" aria-hidden="true"></i></a></li>
-										<li><a href="#"><i class="fa fa-heart" aria-hidden="true"></i></a></li>
-									</ul>
-									<a href="#" class="product-img"><img class="lazy" src="{% static 'assets/img/placeholder-all.png' %}" data-src="{% static 'assets/img/prod-1.png' %}" alt="product"></a>
-									<div class="product-item-cover">
-										<div class="price-cover">
-											<div class="new-price">$1.699</div>
-											<div class="old-price">$1.799</div>
-										</div>
-										<h6 class="prod-title"><a href="#">Granite Peak 24" <br>Girls Mountain Bike</a></h6>
-										<a href="#" class="btn"><span>buy now</span></a>
-									</div>
-									<div class="prod-info">
-										<ul class="prod-list">
-											<li>Frame Size: <span>17</span></li>
-											<li>Class: <span>City</span></li>
-											<li>Number of speeds: <span>7</span></li>
-											<li>Type: <span>Rigid</span></li>
-											<li>Country registration: <span>USA</span></li>
-										</ul>
-									</div>
-								</div>
-							</div>
-							<div class="col-sm-6 col-lg-3">
-								<div class="product-item">
-									<ul class="product-icon-top">
-										<li><a href="#"><i class="fa fa-refresh" aria-hidden="true"></i></a></li>
-										<li><a href="#"><i class="fa fa-heart" aria-hidden="true"></i></a></li>
-									</ul>
-									<a href="#" class="product-img"><img class="lazy" src="{% static 'assets/img/placeholder-all.png' %}" data-src="{% static 'assets/img/prod-2.png' %}" alt="product"></a>
-									<div class="product-item-cover">
-										<div class="price-cover">
-											<div class="new-price">$1.699</div>
-										</div>
-										<h6 class="prod-title"><a href="#">Hyper E-Ride Bike 700C <br>20+ Mile Range</a></h6>
-										<a href="#" class="btn"><span>buy now</span></a>
-									</div>
-									<div class="prod-info">
-										<ul class="prod-list">
-											<li>Frame Size: <span>17</span></li>
-											<li>Class: <span>City</span></li>
-											<li>Number of speeds: <span>7</span></li>
-											<li>Type: <span>Rigid</span></li>
-											<li>Country registration: <span>USA</span></li>
-										</ul>
-									</div>
-								</div>
-							</div>
-							<div class="col-sm-6 col-lg-3">
-								<div class="product-item">
-									<span class="sale">11%</span>
-									<ul class="product-icon-top">
-										<li><a href="#"><i class="fa fa-refresh" aria-hidden="true"></i></a></li>
-										<li><a href="#"><i class="fa fa-heart" aria-hidden="true"></i></a></li>
-									</ul>
-									<a href="#" class="product-img"><img class="lazy" src="{% static 'assets/img/placeholder-all.png' %}" data-src="{% static 'assets/img/prod-3.png' %}" alt="product"></a>
-									<div class="product-item-cover">
-										<div class="price-cover">
-											<div class="new-price">$1.699</div>
-											<div class="old-price">$1.799</div>
-										</div>
-										<h6 class="prod-title"><a href="#">Lightweight M370-27speed <br>Aluminum Alloy Mantis</a></h6>
-										<a href="#" class="btn"><span>buy now</span></a>
-									</div>
-									<div class="prod-info">
-										<ul class="prod-list">
-											<li>Frame Size: <span>17</span></li>
-											<li>Class: <span>City</span></li>
-											<li>Number of speeds: <span>7</span></li>
-											<li>Type: <span>Rigid</span></li>
-											<li>Country registration: <span>USA</span></li>
-										</ul>
-									</div>
-								</div>
-							</div>
-							<div class="col-sm-6 col-lg-3">
-								<div class="product-item">
-									<ul class="product-icon-top">
-										<li><a href="#"><i class="fa fa-refresh" aria-hidden="true"></i></a></li>
-										<li><a href="#"><i class="fa fa-heart" aria-hidden="true"></i></a></li>
-									</ul>
-									<a href="#" class="product-img"><img class="lazy" src="{% static 'assets/img/placeholder-all.png' %}" data-src="{% static 'assets/img/prod-4.png' %}" alt="product"></a>
-									<div class="product-item-cover">
-										<div class="price-cover">
-											<div class="new-price">$1.699</div>
-										</div>
-										<h6 class="prod-title"><a href="#">New Spring Beach Cruiser <br>Bicycle Chrome</a></h6>
-										<a href="#" class="btn"><span>buy now</span></a>
-									</div>
-									<div class="prod-info">
-										<ul class="prod-list">
-											<li>Frame Size: <span>17</span></li>
-											<li>Class: <span>City</span></li>
-											<li>Number of speeds: <span>7</span></li>
-											<li>Type: <span>Rigid</span></li>
-											<li>Country registration: <span>USA</span></li>
-										</ul>
-									</div>
-								</div>
-							</div>
-							<div class="col-sm-6 col-lg-3">
-								<div class="product-item">
-									<ul class="product-icon-top">
-										<li><a href="#"><i class="fa fa-refresh" aria-hidden="true"></i></a></li>
-										<li><a href="#"><i class="fa fa-heart" aria-hidden="true"></i></a></li>
-									</ul>
-									<a href="#" class="product-img"><img class="lazy" src="{% static 'assets/img/placeholder-all.png' %}" data-src="{% static 'assets/img/prod-7.png' %}" alt="product"></a>
-									<div class="product-item-cover">
-										<div class="price-cover">
-											<div class="new-price">$1.699</div>
-										</div>
-										<h6 class="prod-title"><a href="#">Steel Frame MTB Bike <br>with 21 Speed</a></h6>
-										<a href="#" class="btn"><span>buy now</span></a>
-									</div>
-									<div class="prod-info">
-										<ul class="prod-list">
-											<li>Frame Size: <span>17</span></li>
-											<li>Class: <span>City</span></li>
-											<li>Number of speeds: <span>7</span></li>
-											<li>Type: <span>Rigid</span></li>
-											<li>Country registration: <span>USA</span></li>
-										</ul>
-									</div>
-								</div>
-							</div>
-							<div class="col-sm-6 col-lg-3">
-								<div class="product-item">
-									<ul class="product-icon-top">
-										<li><a href="#"><i class="fa fa-refresh" aria-hidden="true"></i></a></li>
-										<li><a href="#"><i class="fa fa-heart" aria-hidden="true"></i></a></li>
-									</ul>
-									<a href="#" class="product-img"><img class="lazy" src="{% static 'assets/img/placeholder-all.png' %}" data-src="{% static 'assets/img/prod-8.png' %}" alt="product"></a>
-									<div class="product-item-cover">
-										<div class="price-cover">
-											<div class="new-price">$1.699</div>
-										</div>
-										<h6 class="prod-title"><a href="#">Leopard Rider No Chain <br>Mountain Bicycle</a></h6>
-										<a href="#" class="btn"><span>buy now</span></a>
-									</div>
-									<div class="prod-info">
-										<ul class="prod-list">
-											<li>Frame Size: <span>17</span></li>
-											<li>Class: <span>City</span></li>
-											<li>Number of speeds: <span>7</span></li>
-											<li>Type: <span>Rigid</span></li>
-											<li>Country registration: <span>USA</span></li>
-										</ul>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="tab tab3">
-						<div class="row product-cover">
-							<div class="col-sm-6 col-lg-3">
-								<div class="product-item">
-									<span class="sale">11%</span>
-									<ul class="product-icon-top">
-										<li><a href="#"><i class="fa fa-refresh" aria-hidden="true"></i></a></li>
-										<li><a href="#"><i class="fa fa-heart" aria-hidden="true"></i></a></li>
-									</ul>
-									<a href="#" class="product-img"><img class="lazy" src="{% static 'assets/img/placeholder-all.png' %}" data-src="{% static 'assets/img/prod-3.png' %}" alt="product"></a>
-									<div class="product-item-cover">
-										<div class="price-cover">
-											<div class="new-price">$1.699</div>
-											<div class="old-price">$1.799</div>
-										</div>
-										<h6 class="prod-title"><a href="#">Lightweight M370-27speed <br>Aluminum Alloy Mantis</a></h6>
-										<a href="#" class="btn"><span>buy now</span></a>
-									</div>
-									<div class="prod-info">
-										<ul class="prod-list">
-											<li>Frame Size: <span>17</span></li>
-											<li>Class: <span>City</span></li>
-											<li>Number of speeds: <span>7</span></li>
-											<li>Type: <span>Rigid</span></li>
-											<li>Country registration: <span>USA</span></li>
-										</ul>
-									</div>
-								</div>
-							</div>
-							<div class="col-sm-6 col-lg-3">
-								<div class="product-item">
-									<ul class="product-icon-top">
-										<li><a href="#"><i class="fa fa-refresh" aria-hidden="true"></i></a></li>
-										<li><a href="#"><i class="fa fa-heart" aria-hidden="true"></i></a></li>
-									</ul>
-									<a href="#" class="product-img"><img class="lazy" src="{% static 'assets/img/placeholder-all.png' %}" data-src="{% static 'assets/img/prod-4.png' %}" alt="product"></a>
-									<div class="product-item-cover">
-										<div class="price-cover">
-											<div class="new-price">$1.699</div>
-										</div>
-										<h6 class="prod-title"><a href="#">New Spring Beach Cruiser <br>Bicycle Chrome</a></h6>
-										<a href="#" class="btn"><span>buy now</span></a>
-									</div>
-									<div class="prod-info">
-										<ul class="prod-list">
-											<li>Frame Size: <span>17</span></li>
-											<li>Class: <span>City</span></li>
-											<li>Number of speeds: <span>7</span></li>
-											<li>Type: <span>Rigid</span></li>
-											<li>Country registration: <span>USA</span></li>
-										</ul>
-									</div>
-								</div>
-							</div>
-							<div class="col-sm-6 col-lg-3">
-								<div class="product-item">
-									<ul class="product-icon-top">
-										<li><a href="#"><i class="fa fa-refresh" aria-hidden="true"></i></a></li>
-										<li><a href="#"><i class="fa fa-heart" aria-hidden="true"></i></a></li>
-									</ul>
-									<a href="#" class="product-img"><img class="lazy" src="{% static 'assets/img/placeholder-all.png' %}" data-src="{% static 'assets/img/prod-5.png' %}" alt="product"></a>
-									<div class="product-item-cover">
-										<div class="price-cover">
-											<div class="new-price">$1.699</div>
-										</div>
-										<h6 class="prod-title"><a href="#">Granite Peak 24" <br>Girls Mountain Bike</a></h6>
-										<a href="#" class="btn"><span>buy now</span></a>
-									</div>
-									<div class="prod-info">
-										<ul class="prod-list">
-											<li>Frame Size: <span>17</span></li>
-											<li>Class: <span>City</span></li>
-											<li>Number of speeds: <span>7</span></li>
-											<li>Type: <span>Rigid</span></li>
-											<li>Country registration: <span>USA</span></li>
-										</ul>
-									</div>
-								</div>
-							</div>
-							<div class="col-sm-6 col-lg-3">
-								<div class="product-item">
-									<ul class="product-icon-top">
-										<li><a href="#"><i class="fa fa-refresh" aria-hidden="true"></i></a></li>
-										<li><a href="#"><i class="fa fa-heart" aria-hidden="true"></i></a></li>
-									</ul>
-									<a href="#" class="product-img"><img class="lazy" src="{% static 'assets/img/placeholder-all.png' %}" data-src="{% static 'assets/img/prod-6.png' %}" alt="product"></a>
-									<div class="product-item-cover">
-										<div class="price-cover">
-											<div class="new-price">$1.699</div>
-										</div>
-										<h6 class="prod-title"><a href="#">Aluminum and Fork <br>Mountain Sr-26omg</a></h6>
-										<a href="#" class="btn"><span>buy now</span></a>
-									</div>
-									<div class="prod-info">
-										<ul class="prod-list">
-											<li>Frame Size: <span>17</span></li>
-											<li>Class: <span>City</span></li>
-											<li>Number of speeds: <span>7</span></li>
-											<li>Type: <span>Rigid</span></li>
-											<li>Country registration: <span>USA</span></li>
-										</ul>
-									</div>
-								</div>
-							</div>
-							<div class="col-sm-6 col-lg-3">
-								<div class="product-item">
-									<span class="top-sale">top sale</span>
-									<ul class="product-icon-top">
-										<li><a href="#"><i class="fa fa-refresh" aria-hidden="true"></i></a></li>
-										<li><a href="#"><i class="fa fa-heart" aria-hidden="true"></i></a></li>
-									</ul>
-									<a href="#" class="product-img"><img class="lazy" src="{% static 'assets/img/placeholder-all.png' %}" data-src="{% static 'assets/img/prod-1.png' %}" alt="product"></a>
-									<div class="product-item-cover">
-										<div class="price-cover">
-											<div class="new-price">$1.699</div>
-											<div class="old-price">$1.799</div>
-										</div>
-										<h6 class="prod-title"><a href="#">Granite Peak 24" <br>Girls Mountain Bike</a></h6>
-										<a href="#" class="btn"><span>buy now</span></a>
-									</div>
-									<div class="prod-info">
-										<ul class="prod-list">
-											<li>Frame Size: <span>17</span></li>
-											<li>Class: <span>City</span></li>
-											<li>Number of speeds: <span>7</span></li>
-											<li>Type: <span>Rigid</span></li>
-											<li>Country registration: <span>USA</span></li>
-										</ul>
-									</div>
-								</div>
-							</div>
-							<div class="col-sm-6 col-lg-3">
-								<div class="product-item">
-									<ul class="product-icon-top">
-										<li><a href="#"><i class="fa fa-refresh" aria-hidden="true"></i></a></li>
-										<li><a href="#"><i class="fa fa-heart" aria-hidden="true"></i></a></li>
-									</ul>
-									<a href="#" class="product-img"><img class="lazy" src="{% static 'assets/img/placeholder-all.png' %}" data-src="{% static 'assets/img/prod-2.png' %}" alt="product"></a>
-									<div class="product-item-cover">
-										<div class="price-cover">
-											<div class="new-price">$1.699</div>
-										</div>
-										<h6 class="prod-title"><a href="#">Hyper E-Ride Bike 700C <br>20+ Mile Range</a></h6>
-										<a href="#" class="btn"><span>buy now</span></a>
-									</div>
-									<div class="prod-info">
-										<ul class="prod-list">
-											<li>Frame Size: <span>17</span></li>
-											<li>Class: <span>City</span></li>
-											<li>Number of speeds: <span>7</span></li>
-											<li>Type: <span>Rigid</span></li>
-											<li>Country registration: <span>USA</span></li>
-										</ul>
-									</div>
-								</div>
-							</div>
-							<div class="col-sm-6 col-lg-3">
-								<div class="product-item">
-									<ul class="product-icon-top">
-										<li><a href="#"><i class="fa fa-refresh" aria-hidden="true"></i></a></li>
-										<li><a href="#"><i class="fa fa-heart" aria-hidden="true"></i></a></li>
-									</ul>
-									<a href="#" class="product-img"><img class="lazy" src="{% static 'assets/img/placeholder-all.png' %}" data-src="{% static 'assets/img/prod-7.png' %}" alt="product"></a>
-									<div class="product-item-cover">
-										<div class="price-cover">
-											<div class="new-price">$1.699</div>
-										</div>
-										<h6 class="prod-title"><a href="#">Steel Frame MTB Bike <br>with 21 Speed</a></h6>
-										<a href="#" class="btn"><span>buy now</span></a>
-									</div>
-									<div class="prod-info">
-										<ul class="prod-list">
-											<li>Frame Size: <span>17</span></li>
-											<li>Class: <span>City</span></li>
-											<li>Number of speeds: <span>7</span></li>
-											<li>Type: <span>Rigid</span></li>
-											<li>Country registration: <span>USA</span></li>
-										</ul>
-									</div>
-								</div>
-							</div>
-							<div class="col-sm-6 col-lg-3">
-								<div class="product-item">
-									<ul class="product-icon-top">
-										<li><a href="#"><i class="fa fa-refresh" aria-hidden="true"></i></a></li>
-										<li><a href="#"><i class="fa fa-heart" aria-hidden="true"></i></a></li>
-									</ul>
-									<a href="#" class="product-img"><img class="lazy" src="{% static 'assets/img/placeholder-all.png' %}" data-src="{% static 'assets/img/prod-8.png' %}" alt="product"></a>
-									<div class="product-item-cover">
-										<div class="price-cover">
-											<div class="new-price">$1.699</div>
-										</div>
-										<h6 class="prod-title"><a href="#">Leopard Rider No Chain <br>Mountain Bicycle</a></h6>
-										<a href="#" class="btn"><span>buy now</span></a>
-									</div>
-									<div class="prod-info">
-										<ul class="prod-list">
-											<li>Frame Size: <span>17</span></li>
-											<li>Class: <span>City</span></li>
-											<li>Number of speeds: <span>7</span></li>
-											<li>Type: <span>Rigid</span></li>
-											<li>Country registration: <span>USA</span></li>
-										</ul>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="tab tab4">
-						<div class="row product-cover">
-							<div class="col-sm-6 col-lg-3">
-								<div class="product-item">
-									<ul class="product-icon-top">
-										<li><a href="#"><i class="fa fa-refresh" aria-hidden="true"></i></a></li>
-										<li><a href="#"><i class="fa fa-heart" aria-hidden="true"></i></a></li>
-									</ul>
-									<a href="#" class="product-img"><img class="lazy" src="{% static 'assets/img/placeholder-all.png' %}" data-src="{% static 'assets/img/prod-5.png' %}" alt="product"></a>
-									<div class="product-item-cover">
-										<div class="price-cover">
-											<div class="new-price">$1.699</div>
-										</div>
-										<h6 class="prod-title"><a href="#">Granite Peak 24" <br>Girls Mountain Bike</a></h6>
-										<a href="#" class="btn"><span>buy now</span></a>
-									</div>
-									<div class="prod-info">
-										<ul class="prod-list">
-											<li>Frame Size: <span>17</span></li>
-											<li>Class: <span>City</span></li>
-											<li>Number of speeds: <span>7</span></li>
-											<li>Type: <span>Rigid</span></li>
-											<li>Country registration: <span>USA</span></li>
-										</ul>
-									</div>
-								</div>
-							</div>
-							<div class="col-sm-6 col-lg-3">
-								<div class="product-item">
-									<ul class="product-icon-top">
-										<li><a href="#"><i class="fa fa-refresh" aria-hidden="true"></i></a></li>
-										<li><a href="#"><i class="fa fa-heart" aria-hidden="true"></i></a></li>
-									</ul>
-									<a href="#" class="product-img"><img class="lazy" src="{% static 'assets/img/placeholder-all.png' %}" data-src="{% static 'assets/img/prod-6.png' %}" alt="product"></a>
-									<div class="product-item-cover">
-										<div class="price-cover">
-											<div class="new-price">$1.699</div>
-										</div>
-										<h6 class="prod-title"><a href="#">Aluminum and Fork <br>Mountain Sr-26omg</a></h6>
-										<a href="#" class="btn"><span>buy now</span></a>
-									</div>
-									<div class="prod-info">
-										<ul class="prod-list">
-											<li>Frame Size: <span>17</span></li>
-											<li>Class: <span>City</span></li>
-											<li>Number of speeds: <span>7</span></li>
-											<li>Type: <span>Rigid</span></li>
-											<li>Country registration: <span>USA</span></li>
-										</ul>
-									</div>
-								</div>
-							</div>
-							<div class="col-sm-6 col-lg-3">
-								<div class="product-item">
-									<span class="top-sale">top sale</span>
-									<ul class="product-icon-top">
-										<li><a href="#"><i class="fa fa-refresh" aria-hidden="true"></i></a></li>
-										<li><a href="#"><i class="fa fa-heart" aria-hidden="true"></i></a></li>
-									</ul>
-									<a href="#" class="product-img"><img class="lazy" src="{% static 'assets/img/placeholder-all.png' %}" data-src="{% static 'assets/img/prod-1.png' %}" alt="product"></a>
-									<div class="product-item-cover">
-										<div class="price-cover">
-											<div class="new-price">$1.699</div>
-											<div class="old-price">$1.799</div>
-										</div>
-										<h6 class="prod-title"><a href="#">Granite Peak 24" <br>Girls Mountain Bike</a></h6>
-										<a href="#" class="btn"><span>buy now</span></a>
-									</div>
-									<div class="prod-info">
-										<ul class="prod-list">
-											<li>Frame Size: <span>17</span></li>
-											<li>Class: <span>City</span></li>
-											<li>Number of speeds: <span>7</span></li>
-											<li>Type: <span>Rigid</span></li>
-											<li>Country registration: <span>USA</span></li>
-										</ul>
-									</div>
-								</div>
-							</div>
-							<div class="col-sm-6 col-lg-3">
-								<div class="product-item">
-									<ul class="product-icon-top">
-										<li><a href="#"><i class="fa fa-refresh" aria-hidden="true"></i></a></li>
-										<li><a href="#"><i class="fa fa-heart" aria-hidden="true"></i></a></li>
-									</ul>
-									<a href="#" class="product-img"><img class="lazy" src="{% static 'assets/img/placeholder-all.png' %}" data-src="{% static 'assets/img/prod-2.png' %}" alt="product"></a>
-									<div class="product-item-cover">
-										<div class="price-cover">
-											<div class="new-price">$1.699</div>
-										</div>
-										<h6 class="prod-title"><a href="#">Hyper E-Ride Bike 700C <br>20+ Mile Range</a></h6>
-										<a href="#" class="btn"><span>buy now</span></a>
-									</div>
-									<div class="prod-info">
-										<ul class="prod-list">
-											<li>Frame Size: <span>17</span></li>
-											<li>Class: <span>City</span></li>
-											<li>Number of speeds: <span>7</span></li>
-											<li>Type: <span>Rigid</span></li>
-											<li>Country registration: <span>USA</span></li>
-										</ul>
-									</div>
-								</div>
-							</div>
-							<div class="col-sm-6 col-lg-3">
-								<div class="product-item">
-									<span class="sale">11%</span>
-									<ul class="product-icon-top">
-										<li><a href="#"><i class="fa fa-refresh" aria-hidden="true"></i></a></li>
-										<li><a href="#"><i class="fa fa-heart" aria-hidden="true"></i></a></li>
-									</ul>
-									<a href="#" class="product-img"><img class="lazy" src="{% static 'assets/img/placeholder-all.png' %}" data-src="{% static 'assets/img/prod-3.png' %}" alt="product"></a>
-									<div class="product-item-cover">
-										<div class="price-cover">
-											<div class="new-price">$1.699</div>
-											<div class="old-price">$1.799</div>
-										</div>
-										<h6 class="prod-title"><a href="#">Lightweight M370-27speed <br>Aluminum Alloy Mantis</a></h6>
-										<a href="#" class="btn"><span>buy now</span></a>
-									</div>
-									<div class="prod-info">
-										<ul class="prod-list">
-											<li>Frame Size: <span>17</span></li>
-											<li>Class: <span>City</span></li>
-											<li>Number of speeds: <span>7</span></li>
-											<li>Type: <span>Rigid</span></li>
-											<li>Country registration: <span>USA</span></li>
-										</ul>
-									</div>
-								</div>
-							</div>
-							<div class="col-sm-6 col-lg-3">
-								<div class="product-item">
-									<ul class="product-icon-top">
-										<li><a href="#"><i class="fa fa-refresh" aria-hidden="true"></i></a></li>
-										<li><a href="#"><i class="fa fa-heart" aria-hidden="true"></i></a></li>
-									</ul>
-									<a href="#" class="product-img"><img class="lazy" src="{% static 'assets/img/placeholder-all.png' %}" data-src="{% static 'assets/img/prod-4.png' %}" alt="product"></a>
-									<div class="product-item-cover">
-										<div class="price-cover">
-											<div class="new-price">$1.699</div>
-										</div>
-										<h6 class="prod-title"><a href="#">New Spring Beach Cruiser <br>Bicycle Chrome</a></h6>
-										<a href="#" class="btn"><span>buy now</span></a>
-									</div>
-									<div class="prod-info">
-										<ul class="prod-list">
-											<li>Frame Size: <span>17</span></li>
-											<li>Class: <span>City</span></li>
-											<li>Number of speeds: <span>7</span></li>
-											<li>Type: <span>Rigid</span></li>
-											<li>Country registration: <span>USA</span></li>
-										</ul>
-									</div>
-								</div>
-							</div>
-							<div class="col-sm-6 col-lg-3">
-								<div class="product-item">
-									<ul class="product-icon-top">
-										<li><a href="#"><i class="fa fa-refresh" aria-hidden="true"></i></a></li>
-										<li><a href="#"><i class="fa fa-heart" aria-hidden="true"></i></a></li>
-									</ul>
-									<a href="#" class="product-img"><img class="lazy" src="{% static 'assets/img/placeholder-all.png' %}" data-src="{% static 'assets/img/prod-7.png' %}" alt="product"></a>
-									<div class="product-item-cover">
-										<div class="price-cover">
-											<div class="new-price">$1.699</div>
-										</div>
-										<h6 class="prod-title"><a href="#">Steel Frame MTB Bike <br>with 21 Speed</a></h6>
-										<a href="#" class="btn"><span>buy now</span></a>
-									</div>
-									<div class="prod-info">
-										<ul class="prod-list">
-											<li>Frame Size: <span>17</span></li>
-											<li>Class: <span>City</span></li>
-											<li>Number of speeds: <span>7</span></li>
-											<li>Type: <span>Rigid</span></li>
-											<li>Country registration: <span>USA</span></li>
-										</ul>
-									</div>
-								</div>
-							</div>
-							<div class="col-sm-6 col-lg-3">
-								<div class="product-item">
-									<ul class="product-icon-top">
-										<li><a href="#"><i class="fa fa-refresh" aria-hidden="true"></i></a></li>
-										<li><a href="#"><i class="fa fa-heart" aria-hidden="true"></i></a></li>
-									</ul>
-									<a href="#" class="product-img"><img class="lazy" src="{% static 'assets/img/placeholder-all.png' %}" data-src="{% static 'assets/img/prod-8.png' %}" alt="product"></a>
-									<div class="product-item-cover">
-										<div class="price-cover">
-											<div class="new-price">$1.699</div>
-										</div>
-										<h6 class="prod-title"><a href="#">Leopard Rider No Chain <br>Mountain Bicycle</a></h6>
-										<a href="#" class="btn"><span>buy now</span></a>
-									</div>
-									<div class="prod-info">
-										<ul class="prod-list">
-											<li>Frame Size: <span>17</span></li>
-											<li>Class: <span>City</span></li>
-											<li>Number of speeds: <span>7</span></li>
-											<li>Type: <span>Rigid</span></li>
-											<li>Country registration: <span>USA</span></li>
-										</ul>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
 				</div>
 			</div>
 		</div>
