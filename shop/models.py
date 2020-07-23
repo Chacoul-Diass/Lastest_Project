@@ -1,4 +1,5 @@
 from django.db import models
+from django.contrib.auth.models import User
 
 # Create your models here.
 
@@ -33,7 +34,7 @@ class Product(models.Model):
 
 
 	date_cre = models.DateTimeField(auto_now_add=True)
-	date_mod = models.DateTimeField(auto_now=True)
+	date_mod = models.DateTimeField(auto_now=True) 
 
 	class Meta:
 		verbose_name = "product"
@@ -41,3 +42,9 @@ class Product(models.Model):
 
 	def __str__(self):
 		return self.titre
+	
+
+class ShopCart(models.Model):
+	user = models.ForeignKey(User, on_delete=models.SET_NULL, null=True)
+	produit = models.ForeignKey(Product, on_delete=models.SET_NULL, null=True)
+	quantity = models.IntegerField()

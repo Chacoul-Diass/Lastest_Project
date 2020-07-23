@@ -1,0 +1,53 @@
+{% extends 'bases/base.html' %}
+{% load static %}
+    {% block content %}
+	<!-- ================ HEADER-TITLE ================ -->
+	<section class="s-header-title">
+		<div class="container">
+			<h1>Sign-Up  Page</h1>
+			<ul class="breadcrambs">
+				<li><a href="{% url 'home' %}">Home</a></li>
+				<li>Signup</li>
+			</ul>
+		</div>
+	</section>
+	
+	<section class="s-contacts page-contacts">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="container s-anim">
+                        <h2 class="title">Sign Up </h2>
+                        
+                        {% if messages %}
+                            {% for message in messages %}
+                                <div class="alert-alert-{{message.tags}}" role="alert" style="color: crimson;">
+                                    {{message}}
+                                </div>
+                            {% endfor %}
+                        {% endif %}
+                        <form  method="post">
+                            {% csrf_token %}
+
+                            {% for field in form %}
+                            <p>
+                                {{ field.label_tag }} <br>
+                                {{ field }}
+                                {% if field.help_text %}
+                                    <small style="..."> {{field.help_text }} </small>
+                                {% endif %}
+                                {% for error in field.errors %}
+                                    <p style="..."> {{error}} </p>
+                                {% endfor %}
+                            </p>
+                            {% endfor %}
+                            <button type="submit">Singn Up</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+	</section>
+	<!--================= S-CONTACTS END =================-->
+
+    {% endblock %}

@@ -9,4 +9,8 @@ urlpatterns = [
 
 	# path('single-product/<int:id>/', views.single_product, name="single-product"),
 
+    #AddtoCart
+    path('addtocart/<int:id>', views.add_to_cart, name='addtocart'),
+
+
 ]

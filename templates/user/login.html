@@ -1,0 +1,45 @@
+{% extends 'bases/base.html' %}
+{% load static %}
+    {% block content %}
+	<!-- ================ HEADER-TITLE ================ -->
+	<section class="s-header-title">
+		<div class="container">
+			<h1>Login Page</h1>
+			<ul class="breadcrambs">
+				<li><a href="{% url 'home' %}">Home</a></li>
+				<li>Login Page</li>
+			</ul>
+		</div>
+	</section>
+	<!-- ============== HEADER-TITLE END ============== -->
+
+	
+
+	<!--=================== Login ===================-->
+	<section class="s-contacts page-contacts">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="container s-anim">
+                    <h2 class="title">Login</h2>
+                    <form id='contactform'  name="contactform" method="post">
+                        {% csrf_token %}
+
+                        <div class="form-group">
+                            <input class="input"  type="text" name="username" placeholder="Username">
+                        </div>
+                        <div class="form-group">
+                            <input class="input" type="text" class="form-control" name="password" placeholder="Password">
+                        </div>
+                        
+                        <input type="submit" value="Envoyer">
+                    </form>
+                    
+                </div>
+
+            </div>
+        </div>
+		
+	</section>
+	<!--================= S-CONTACTS END =================-->
+
+    {% endblock %}

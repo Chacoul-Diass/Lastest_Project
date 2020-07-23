@@ -1,14 +1,24 @@
-from django.http import HttpRequest, HttpResponse
+from django.http import HttpRequest, HttpResponse, HttpResponseRedirect
 from django.shortcuts import render, redirect
+
+from django.contrib.auth.models import User
+from django.contrib import messages
+from django.contrib.auth import authenticate, login,logout
+from .forms import SignupForm
 
 import datetime
 from creto import models
+
+from shop.models import Product
 
 
 # Create your views here.
 
 def index(request):
-    return render(request, 'pages/index.html')
+    produit = Product.objects.filter().order_by('-id')[:5]
+    prod = Product.objects.filter().order_by('?')[:8]
+    data = {'produit':produit, 'prod':prod}
+    return render(request, 'pages/index.html', data)
 
 
 def gallery(request):
@@ -42,3 +52,46 @@ def contacts(request: HttpRequest) -> HttpResponse:
 
         }
         return render(request, 'pages/contacts.html')
+
+#inscription
+def signup_form(request):
+    if request.method =='POST':
+        form = SignupForm(request.POST)
+        if form.is_valid():
+            form.save()
+
+            #On recupère le @username et @password pour connecter l'utilisateur
+            username = form.cleaned_data.get('username')
+            password = form.cleaned_data.get('password1')
+            user = authenticate(username=username, password=password)
+            login(request, user)
+
+            messages.success(request, 'votre compte a ete creer avec success')
+            return HttpResponseRedirect('/')
+        else:
+            messages.warning(request, form.errors)
+            return HttpResponseRedirect('/sign-up')
+    else:
+        form = SignupForm()
+    return render(request, 'user/sign-up.html', {'form':form})
+
+def log_in(request):
+    if request.method=='POST':
+
+        username = request.POST['username']
+        password = request.POST['password']
+        user = authenticate(request, username=username, password=password)
+        if user is not None:
+            login(request, user)
+
+            messages.success(request, 'vous etes bien connecté')
+            return HttpResponseRedirect('/')
+        else:
+            messages.warning(request, 'username or password incorrect')
+            return HttpResponseRedirect('/log-in')
+    return render(request, 'user/login.html')
+
+#deconnexion
+def log_out(request):
+    logout(request)
+    return HttpResponseRedirect('/')

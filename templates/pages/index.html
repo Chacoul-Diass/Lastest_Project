@@ -248,33 +248,42 @@
 				<div class="tabs-content">
 					<div class="tab tab1">
 						<div class="row product-cover">
-							<div class="col-sm-6 col-lg-3">
-								<div class="product-item">
-									<span class="top-sale">top sale</span>
-									<ul class="product-icon-top">
-										<li><a href="#"><i class="fa fa-refresh" aria-hidden="true"></i></a></li>
-										<li><a href="#"><i class="fa fa-heart" aria-hidden="true"></i></a></li>
-									</ul>
-									<a href="shop/single-shop.html" class="product-img"><img class="lazy" src="{% static 'assets/img/placeholder-all.png' %}" data-src="{% static 'assets/img/prod-1.png' %}" alt="product"></a>
-									<div class="product-item-cover">
-										<div class="price-cover">
-											<div class="new-price">$1.699</div>
-											<div class="old-price">$1.799</div>
-										</div>
-										<h6 class="prod-title"><a href="shop/single-shop.html">Granite Peak 24" <br>Girls Mountain Bike</a></h6>
-										<a href="shop/single-shop.html" class="btn"><span>buy now</span></a>
-									</div>
-									<div class="prod-info">
-										<ul class="prod-list">
-											<li>Frame Size: <span>17</span></li>
-											<li>Class: <span>City</span></li>
-											<li>Number of speeds: <span>7</span></li>
-											<li>Type: <span>Rigid</span></li>
-											<li>Country registration: <span>USA</span></li>
+							{% for pr in produit %}
+								<div class="col-sm-6 col-lg-3">
+
+									<div class="product-item">
+										<span class="top-sale">top sale</span>
+										<ul class="product-icon-top">
+											<li><a href="#"><i class="fa fa-refresh" aria-hidden="true"></i></a></li>
+											<li><a href="#"><i class="fa fa-heart" aria-hidden="true"></i></a></li>
 										</ul>
+										<a href="addtocart/{{pr.id}}" class="product-img">
+											{% if pr.image1 %}
+											<img class="lazy" src="{{pr.image1.url }}" data-src="{{pr.image1.url}}" alt="product">
+											{% else %}
+											<img class="lazy" src="{% static 'assets/img/placeholder-all.png' %}" data-src="{% static 'assets/img/prod-1.png' %}" alt="product">
+											{% endif %}
+										</a>
+										<div class="product-item-cover">
+											<div class="price-cover">
+												<div class="new-price">$ {{pr.prix}} </div>
+												<div class="old-price">${{pr.reduction}}</div>
+											</div>
+											<h6 class="prod-title"><a href="shop/single-shop.html">{{pr.titre}} </a></h6>
+											<a href="addtocart/{{pr.id}}" class="btn"><span>buy now</span></a>
+										</div>
+										<div class="prod-info">
+											<ul class="prod-list">
+												<li>Frame Size: <span>17</span></li>
+												<li>Class: <span>City</span></li>
+												<li>Number of speeds: <span>7</span></li>
+												<li>Type: <span>Rigid</span></li>
+												<li>Country registration: <span>USA</span></li>
+											</ul>
+										</div>
 									</div>
 								</div>
-							</div>
+							{% endfor %}
 							<div class="col-sm-6 col-lg-3">
 								<div class="product-item">
 									<ul class="product-icon-top">

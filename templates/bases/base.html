@@ -45,11 +45,17 @@
 						<li><a href="tel:+912345687"><i class="fa fa-phone"></i>+9123 456 87</a></li>
 						<li><a href="mailto:creto@gmail.com"><i class="fa fa-envelope" aria-hidden="true"></i>creto@gmail.com</a></li>
 					</ul>
+
 					<ul class="icon-right-list">
 						<li><a class="header-like" href="#"><i class="fa fa-heart" aria-hidden="true"></i><span>6</span></a></li>
-						<li><a class="header-user" href="#"><i class="fa fa-user" aria-hidden="true"></i></a></li>
+						{% if user.id is not None %}
+						<li><a class="header-user" href="#"><i class="fa fa-user" aria-hidden="true"></i> {{user.username}}</a></li>/<li><a class="txt-uppercase" href=" {% url 'log-out' %} ">Logout</a></li>
+						{% else %}
+						<li><a class="txt-uppercase" href=" {% url 'log-in' %} ">Login</a></li>/<li><a class="txt-uppercase" href=" {% url 'sign-up' %} ">Signup</a></li>
+						{% endif %}
 						<li><a class="header-cart" href="#"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a></li>
 					</ul>
+
 				</div>
 			</div>
 		</div>
