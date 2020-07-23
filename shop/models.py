@@ -26,7 +26,7 @@ class Product(models.Model):
 	image2 = models.ImageField(upload_to = 'shop/produit/image', blank=True, null =True)
 	image3 = models.ImageField(upload_to = 'shop/produit/image', blank=True, null =True)
 	prix = models.FloatField()
-	reduction = models.FloatField(blank=True)
+	reduction = models.FloatField(blank=True, null=True)
 	categorie = models.ForeignKey(Category, on_delete=models.CASCADE, related_name = 'categorie')
 	status = models.BooleanField(default=True)
 	recommande = models.BooleanField(default=False)
