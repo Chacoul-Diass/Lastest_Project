@@ -15,7 +15,7 @@ from creto.models import Creto
 # lien → {% url 'shop:home' %}
 def shop(request):
 
-    info= Creto.objects.get(pk=1)
+    info= Creto.objects.first()
     latestProds= models.Product.objects.reverse()[:5]
     data = {'info':info, 'latestProds':latestProds}
     return render(request, 'pages/shop/shop.html', data)
