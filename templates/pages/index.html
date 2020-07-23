@@ -634,120 +634,6 @@
 	</section>
 	<!--================ S-SUBSCRIBE END ================-->
 
-	<!--================== S-TOP-SALE ==================-->
-	<section class="s-top-sale">
-		<div class="container">
-			<h2 class="title">Top sale</h2>
-			<div class="row product-cover">
-				<div class="col-sm-6 col-lg-3">
-					<div class="product-item">
-						<ul class="product-icon-top">
-							<li><a href="#"><i class="fa fa-refresh" aria-hidden="true"></i></a></li>
-							<li><a href="#"><i class="fa fa-heart" aria-hidden="true"></i></a></li>
-						</ul>
-						<a href="#" class="product-img"><img class="lazy" src="{% static 'assets/img/placeholder-all.png' %}" data-src="{% static 'assets/img/prod-9.png' %}" alt="product"></a>
-						<div class="product-item-cover">
-							<div class="price-cover">
-								<div class="new-price">$1.699</div>
-								<div class="old-price">$1.799</div>
-							</div>
-							<h6 class="prod-title"><a href="#">Granite Peak 24" <br>Girls Mountain Bike</a></h6>
-							<a href="#" class="btn"><span>buy now</span></a>
-						</div>
-						<div class="prod-info">
-							<ul class="prod-list">
-								<li>Frame Size: <span>17</span></li>
-								<li>Class: <span>City</span></li>
-								<li>Number of speeds: <span>7</span></li>
-								<li>Type: <span>Rigid</span></li>
-								<li>Country registration: <span>USA</span></li>
-							</ul>
-						</div>
-					</div>
-				</div>
-				<div class="col-sm-6 col-lg-3">
-					<div class="product-item">
-						<ul class="product-icon-top">
-							<li><a href="#"><i class="fa fa-refresh" aria-hidden="true"></i></a></li>
-							<li><a href="#"><i class="fa fa-heart" aria-hidden="true"></i></a></li>
-						</ul>
-						<a href="#" class="product-img"><img class="lazy" src="{% static 'assets/img/placeholder-all.png' %}" data-src="{% static 'assets/img/prod-10.png' %}" alt="product"></a>
-						<div class="product-item-cover">
-							<div class="price-cover">
-								<div class="new-price">$1.499</div>
-								<div class="old-price">$1.799</div>
-							</div>
-							<h6 class="prod-title"><a href="#">Granite Peak 24" <br>Girls Mountain Bike</a></h6>
-							<a href="#" class="btn"><span>buy now</span></a>
-						</div>
-						<div class="prod-info">
-							<ul class="prod-list">
-								<li>Frame Size: <span>17</span></li>
-								<li>Class: <span>City</span></li>
-								<li>Number of speeds: <span>7</span></li>
-								<li>Type: <span>Rigid</span></li>
-								<li>Country registration: <span>USA</span></li>
-							</ul>
-						</div>
-					</div>
-				</div>
-				<div class="col-sm-6 col-lg-3">
-					<div class="product-item">
-						<ul class="product-icon-top">
-							<li><a href="#"><i class="fa fa-refresh" aria-hidden="true"></i></a></li>
-							<li><a href="#"><i class="fa fa-heart" aria-hidden="true"></i></a></li>
-						</ul>
-						<a href="#" class="product-img"><img class="lazy" src="{% static 'assets/img/placeholder-all.png' %}" data-src="{% static 'assets/img/prod-11.png' %}" alt="product"></a>
-						<div class="product-item-cover">
-							<div class="price-cover">
-								<div class="new-price">$1.699</div>
-								<div class="old-price">$1.799</div>
-							</div>
-							<h6 class="prod-title"><a href="#">Granite Peak 24" <br>Girls Mountain Bike</a></h6>
-							<a href="#" class="btn"><span>buy now</span></a>
-						</div>
-						<div class="prod-info">
-							<ul class="prod-list">
-								<li>Frame Size: <span>17</span></li>
-								<li>Class: <span>City</span></li>
-								<li>Number of speeds: <span>7</span></li>
-								<li>Type: <span>Rigid</span></li>
-								<li>Country registration: <span>USA</span></li>
-							</ul>
-						</div>
-					</div>
-				</div>
-				<div class="col-sm-6 col-lg-3">
-					<div class="product-item">
-						<ul class="product-icon-top">
-							<li><a href="#"><i class="fa fa-refresh" aria-hidden="true"></i></a></li>
-							<li><a href="#"><i class="fa fa-heart" aria-hidden="true"></i></a></li>
-						</ul>
-						<a href="#" class="product-img"><img class="lazy" src="{% static 'assets/img/placeholder-all.png' %}" data-src="{% static 'assets/img/prod-12.png' %}" alt="product"></a>
-						<div class="product-item-cover">
-							<div class="price-cover">
-								<div class="new-price">$1.499</div>
-								<div class="old-price">$1.799</div>
-							</div>
-							<h6 class="prod-title"><a href="#">Granite Peak 24" <br>Girls Mountain Bike</a></h6>
-							<a href="#" class="btn"><span>buy now</span></a>
-						</div>
-						<div class="prod-info">
-							<ul class="prod-list">
-								<li>Frame Size: <span>17</span></li>
-								<li>Class: <span>City</span></li>
-								<li>Number of speeds: <span>7</span></li>
-								<li>Type: <span>Rigid</span></li>
-								<li>Country registration: <span>USA</span></li>
-							</ul>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-	<!--================ S-TOP-SALE END ================-->
-
 	<!--================== S-FEEDBACK ==================-->
 	<section class="s-feedback" style="background-image: url({% static 'assets/img/bg-feedback.jpg' %});">
 		<span class="effwct-bg-feedback" style="background-image: url({% static 'assets/img/effect-bg-feedback.svg' %});"></span>
@@ -755,15 +641,16 @@
 		<div class="container">
 			<h2 class="title">feedback</h2>
 			<div class="feedback-slider">
-				<div class="feedback-slide">
+                {% for feed in feedback %}
+                    <div class="feedback-slide">
 					<div class="feedback-item">
 						<div class="feedback-content">
-							<p>“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempoinc ididunt ut magna aliqua dolor sit amet, consectetur adipiscing elit magna”</p>
+							<p>{{ feed.message }}</p>
 						</div>
 						<div class="feedback-item-top">
 							<img src="{% static 'assets/img/feedback-photo-1.png' %}" alt="photo">
 							<div class="feedback-title">
-								<h5 class="title"><span>Li piters</span></h5>
+								<h5 class="title"><span>{{ feed }}</span></h5>
 								<ul class="rating">
 									<li class="star-bg"><i class="fa fa-star" aria-hidden="true"></i></li>
 									<li class="star-bg"><i class="fa fa-star" aria-hidden="true"></i></li>
@@ -775,66 +662,10 @@
 						</div>
 					</div>
 				</div>
-				<div class="feedback-slide">
-					<div class="feedback-item">
-						<div class="feedback-content">
-							<p>“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempoinc ididunt ut magna aliqua dolor sit amet, consectetur adipiscing elit magna”</p>
-						</div>
-						<div class="feedback-item-top">
-							<img src="{% static 'assets/img/feedback-photo-2.png' %}" alt="photo">
-							<div class="feedback-title">
-								<h5 class="title"><span>Sam Barton</span></h5>
-								<ul class="rating">
-									<li class="star-bg"><i class="fa fa-star" aria-hidden="true"></i></li>
-									<li class="star-bg"><i class="fa fa-star" aria-hidden="true"></i></li>
-									<li class="star-bg"><i class="fa fa-star" aria-hidden="true"></i></li>
-									<li class="star-bg"><i class="fa fa-star" aria-hidden="true"></i></li>
-									<li class="star-not-bg"><i class="fa fa-star-o" aria-hidden="true"></i></li>
-								</ul>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="feedback-slide">
-					<div class="feedback-item">
-						<div class="feedback-content">
-							<p>“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempoinc ididunt ut magna aliqua dolor sit amet, consectetur adipiscing elit magna”</p>
-						</div>
-						<div class="feedback-item-top">
-							<img src="{% static 'assets/img/feedback-photo-3.png' %}" alt="photo">
-							<div class="feedback-title">
-								<h5 class="title"><span>Zoe Tyler</span></h5>
-								<ul class="rating">
-									<li class="star-bg"><i class="fa fa-star" aria-hidden="true"></i></li>
-									<li class="star-bg"><i class="fa fa-star" aria-hidden="true"></i></li>
-									<li class="star-bg"><i class="fa fa-star" aria-hidden="true"></i></li>
-									<li class="star-bg"><i class="fa fa-star" aria-hidden="true"></i></li>
-									<li class="star-not-bg"><i class="fa fa-star-o" aria-hidden="true"></i></li>
-								</ul>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="feedback-slide">
-					<div class="feedback-item">
-						<div class="feedback-content">
-							<p>“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempoinc ididunt ut magna aliqua dolor sit amet, consectetur adipiscing elit magna”</p>
-						</div>
-						<div class="feedback-item-top">
-							<img src="{% static 'assets/img/feedback-photo-2.png' %}" alt="photo">
-							<div class="feedback-title">
-								<h5 class="title"><span>Sam Barton</span></h5>
-								<ul class="rating">
-									<li class="star-bg"><i class="fa fa-star" aria-hidden="true"></i></li>
-									<li class="star-bg"><i class="fa fa-star" aria-hidden="true"></i></li>
-									<li class="star-bg"><i class="fa fa-star" aria-hidden="true"></i></li>
-									<li class="star-bg"><i class="fa fa-star" aria-hidden="true"></i></li>
-									<li class="star-not-bg"><i class="fa fa-star-o" aria-hidden="true"></i></li>
-								</ul>
-							</div>
-						</div>
-					</div>
-				</div>
+                {% endfor %}
+
+
+
 			</div>
 		</div>
 	</section>
