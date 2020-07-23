@@ -7,8 +7,17 @@ from creto import models
 
 # Create your views here.
 
-def index(request):
-    return render(request, 'pages/index.html')
+def index(request: HttpRequest) -> HttpResponse:
+    if request.method == 'POST':
+        email = request.POST.get('subscribe')
+        print(email)
+        c = models.Suscribe(
+            email=email,
+        )
+        c.save()
+        return redirect('home')
+    else:
+        return render(request, 'pages/index.html')
 
 
 def gallery(request):
