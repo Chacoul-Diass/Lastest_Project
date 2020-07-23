@@ -55,7 +55,7 @@
 		</div>
 		<div class="header-menu">
 			<div class="container">
-				<a href="index.html" class="logo"><img src="{% static 'assets/img/logo.svg' %}" alt="logo"></a>
+				<a href="{% url 'home' %}" class="logo"><img src="{% static 'assets/img/logo.svg' %}" alt="logo"></a>
 				<nav class="nav-menu">
 					<ul class="nav-list">
                         <li><a href="{% url 'home' %}">Home</a></li>
@@ -88,13 +88,13 @@
 				<div class="footer-item col-md-5 col-lg-4">
 					<h6>info</h6>
 					<ul class="footer-list">
-						<li><a href="shop/shop.html">FAQ</a></li>
-						<li><a href="shop/shop.html">Contacts</a></li>
-						<li><a href="shop/shop.html">Shipping + Heading</a></li>
-						<li><a href="shop/shop.html">Exchanges</a></li>
-						<li><a href="shop/shop.html">2019 Catalog</a></li>
-						<li><a href="shop/shop.html">Returns</a></li>
-						<li><a href="shop/shop.html">Search</a></li>
+						<li><a href="{% url 'shop:shop' %}">FAQ</a></li>
+						<li><a href="{% url 'shop:shop' %}">Contacts</a></li>
+						<li><a href="{% url 'shop:shop' %}">Shipping + Heading</a></li>
+						<li><a href="{% url 'shop:shop' %}">Exchanges</a></li>
+						<li><a href="{% url 'shop:shop' %}">2019 Catalog</a></li>
+						<li><a href="{% url 'shop:shop' %}">Returns</a></li>
+						<li><a href="{% url 'shop:shop' %}">Search</a></li>
 					</ul>
 				</div>
 			</div>
@@ -112,11 +112,11 @@
 				<div class="footer-item col-md-5 col-lg-4">
 					<h6>shop</h6>
 					<ul class="footer-list">
-						<li><a href="shop/shop.html">Road Bike</a></li>
-						<li><a href="shop/shop.html">City Bike</a></li>
-						<li><a href="shop/shop.html">Mountain Bike</a></li>
-						<li><a href="shop/shop.html">Kids Bike</a></li>
-						<li><a href="shop/shop.html">BMX Bike</a></li>
+						<li><a href="{% url 'shop:shop' %}">Road Bike</a></li>
+						<li><a href="{% url 'shop:shop' %}">City Bike</a></li>
+						<li><a href="{% url 'shop:shop' %}">Mountain Bike</a></li>
+						<li><a href="{% url 'shop:shop' %}">Kids Bike</a></li>
+						<li><a href="{% url 'shop:shop' %}">BMX Bike</a></li>
 					</ul>
 				</div>
 			</div>
