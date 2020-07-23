@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 from django.shortcuts import render, redirect
 from django.http import HttpRequest, HttpResponse, HttpResponseRedirect
 import datetime
@@ -6,20 +5,20 @@ from django.contrib import messages
 
 from .models import ShopCart
 from .forms import ShopCartForm
-=======
 from django.shortcuts import render
 from django.http import HttpRequest, HttpResponse
 import datetime
 from . import models
 from shop.models import Category, Product
->>>>>>> 926dd522385aab4aa95472efb3683e8fa543b7eb
 
 # Create your views here.
 
 # lien → {% url 'shop:home' %}
 def shop(request):
+    return render(request, 'pages/shop/shop.html')
 
-	data = {
+	# data = {}
+    
 	# tous les departements
 	# 'departements':models.Departement.objects.all(),
 
@@ -28,9 +27,8 @@ def shop(request):
 
 	# 'recomProds':models.Product.objects.filter(recommande=True).reverse()[:10],
 
-<<<<<<< HEAD
-def shop(request):
-    return render(request, 'pages/shop/shop.html'),
+def single(request):
+    return render(request, 'pages/shop/single-shop')
 
 
 def add_to_cart(request, id):
@@ -74,23 +72,3 @@ def add_to_cart(request, id):
         return HttpResponseRedirect(url)
 
     
-=======
-	'nbArticles':Product.objects.count(),
-
-	'products' : Product.objects.all(),
-
-	# 'info':Info.objects.first(),
-	}
-
-	return render(request, 'pages/shop/shop.html',data)
-
-
-# lien → {% url 'shop:single' %}
-def single(request, id):
-
-	data = {
-		'article': Product.objects.get(id=id),
-	}
-
-	return render(request, "pages/shop/single-shop.html",data)
->>>>>>> 926dd522385aab4aa95472efb3683e8fa543b7eb

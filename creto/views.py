@@ -14,25 +14,11 @@ from shop.models import Product
 
 # Create your views here.
 
-<<<<<<< HEAD
 def index(request):
     produit = Product.objects.filter().order_by('-id')[:5]
-    prod = Product.objects.filter().order_by('?')[:8]
+    prod = Product.objects.filter().order_by('id')[:8]
     data = {'produit':produit, 'prod':prod}
     return render(request, 'pages/index.html', data)
-=======
-def index(request: HttpRequest) -> HttpResponse:
-    if request.method == 'POST':
-        email = request.POST.get('subscribe')
-        print(email)
-        c = models.Suscribe(
-            email=email,
-        )
-        c.save()
-        return redirect('home')
-    else:
-        return render(request, 'pages/index.html')
->>>>>>> 926dd522385aab4aa95472efb3683e8fa543b7eb
 
 
 def gallery(request):
@@ -68,7 +54,6 @@ def contacts(request: HttpRequest) -> HttpResponse:
         data = {
             'info': el,
         }
-<<<<<<< HEAD
         return render(request, 'pages/contacts.html')
 
 #inscription
@@ -113,7 +98,3 @@ def log_in(request):
 def log_out(request):
     logout(request)
     return HttpResponseRedirect('/')
-=======
-
-    return render(request, 'pages/contacts.html', data)
->>>>>>> 926dd522385aab4aa95472efb3683e8fa543b7eb

@@ -164,16 +164,22 @@
 	<section class="s-category-bicycle">
 		<div class="container">
 			<div class="slider-categ-bicycle">
+				{% for sp in produit%}
 				<div class="slide-categ-bicycle">
 					<div class="categ-bicycle-item">
+						{% if sp.image1 %}
+						<img src=" {{sp.image1.url}} " alt="category">
+						{% else %}
 						<img src="{% static 'assets/img/categ-2.png' %}" alt="category">
+						{% endif %}
 						<div class="categ-bicycle-info">
-							<h4 class="title">mountain <br>& road bikes</h4>
+							<h4 class="title">{{sp.titre}}</h4>
 							<a href="{% url 'shop:shop' %}" class="btn"><span>view more</span></a>
 						</div>
 					</div>
 				</div>
-				<div class="slide-categ-bicycle">
+				{% endfor %}
+				<!-- <div class="slide-categ-bicycle">
 					<div class="categ-bicycle-item">
 						<img src="{% static 'assets/img/categ-3.png' %}" alt="category">
 						<div class="categ-bicycle-info">
@@ -181,8 +187,8 @@
 							<a href="{% url 'shop:shop' %}" class="btn"><span>view more</span></a>
 						</div>
 					</div>
-				</div>
-				<div class="slide-categ-bicycle">
+				</div> -->
+				<!-- <div class="slide-categ-bicycle">
 					<div class="categ-bicycle-item">
 						<img src="{% static 'assets/img/categ-1.png' %}" alt="category">
 						<div class="categ-bicycle-info">
@@ -190,8 +196,8 @@
 							<a href="{% url 'shop:shop' %}" class="btn"><span>view more</span></a>
 						</div>
 					</div>
-				</div>
-				<div class="slide-categ-bicycle">
+				</div> -->
+				<!-- <div class="slide-categ-bicycle">
 					<div class="categ-bicycle-item">
 						<img src="{% static 'assets/img/categ-3.png' %}" alt="category">
 						<div class="categ-bicycle-info">
@@ -199,7 +205,7 @@
 							<a href="{% url 'shop:shop' %}" class="btn"><span>view more</span></a>
 						</div>
 					</div>
-				</div>
+				</div> -->
 			</div>
 		</div>
 	</section>
@@ -248,8 +254,7 @@
 				<div class="tabs-content">
 					<div class="tab tab1">
 						<div class="row product-cover">
-<<<<<<< HEAD
-							{% for pr in produit %}
+							{% for pr in prod %}
 								<div class="col-sm-6 col-lg-3">
 
 									<div class="product-item">
@@ -257,31 +262,6 @@
 										<ul class="product-icon-top">
 											<li><a href="#"><i class="fa fa-refresh" aria-hidden="true"></i></a></li>
 											<li><a href="#"><i class="fa fa-heart" aria-hidden="true"></i></a></li>
-=======
-							<div class="col-sm-6 col-lg-3">
-								<div class="product-item">
-									<span class="top-sale">top sale</span>
-									<ul class="product-icon-top">
-										<li><a href="#"><i class="fa fa-refresh" aria-hidden="true"></i></a></li>
-										<li><a href="#"><i class="fa fa-heart" aria-hidden="true"></i></a></li>
-									</ul>
-									<a href="{% url 'shop:single' %}" class="product-img"><img class="lazy" src="{% static 'assets/img/placeholder-all.png' %}" data-src="{% static 'assets/img/prod-1.png' %}" alt="product"></a>
-									<div class="product-item-cover">
-										<div class="price-cover">
-											<div class="new-price">$1.699</div>
-											<div class="old-price">$1.799</div>
-										</div>
-										<h6 class="prod-title"><a href="{% url 'shop:single' %}">Granite Peak 24" <br>Girls Mountain Bike</a></h6>
-										<a href="{% url 'shop:single' %}" class="btn"><span>buy now</span></a>
-									</div>
-									<div class="prod-info">
-										<ul class="prod-list">
-											<li>Frame Size: <span>17</span></li>
-											<li>Class: <span>City</span></li>
-											<li>Number of speeds: <span>7</span></li>
-											<li>Type: <span>Rigid</span></li>
-											<li>Country registration: <span>USA</span></li>
->>>>>>> 926dd522385aab4aa95472efb3683e8fa543b7eb
 										</ul>
 										<a href="addtocart/{{pr.id}}" class="product-img">
 											{% if pr.image1 %}
@@ -310,7 +290,7 @@
 									</div>
 								</div>
 							{% endfor %}
-							<div class="col-sm-6 col-lg-3">
+							<!-- <div class="col-sm-6 col-lg-3">
 								<div class="product-item">
 									<ul class="product-icon-top">
 										<li><a href="#"><i class="fa fa-refresh" aria-hidden="true"></i></a></li>
@@ -334,7 +314,7 @@
 										</ul>
 									</div>
 								</div>
-							</div>
+							</div> -->
 							<div class="col-sm-6 col-lg-3">
 								<div class="product-item">
 									<span class="sale">11%</span>

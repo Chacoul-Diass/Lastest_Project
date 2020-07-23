@@ -1,4 +1,5 @@
 from django.urls import path
+
 from creto import views
 
 urlpatterns = [
@@ -12,5 +13,4 @@ urlpatterns = [
     path('log-in', views.log_in, name='log-in'),
     #deconnexion
     path('log-out', views.log_out, name='log-out'),
-
 ]
