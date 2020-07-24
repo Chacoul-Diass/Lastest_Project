@@ -36,7 +36,12 @@ def shop(request):
     
 
 def single(request, id):
-    return render(request, 'pages/shop/single-shop.html')
+	data = {
+		'article': Product.objects.get(id=id),
+
+		'info': Creto.objects.first(),
+	}
+	return render(request, 'pages/shop/single-shop.html', data)
 
 
 
